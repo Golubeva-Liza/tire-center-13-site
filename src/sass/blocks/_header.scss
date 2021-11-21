@@ -1,0 +1,133 @@
+.header{
+   height: 80px;
+   background-color: $color-black;
+   color: white;
+   position: relative;
+   // &:before{
+   //    content: '';
+   //    width: 96px;
+   //    height: 96px;
+   //    position: absolute;
+   //    top: 0;
+   //    left: 50%;
+   //    transform: translateX(-50%);
+   //    background-color: $color-black;
+   //    z-index: -1;
+   //    border-radius: 16px;
+   // }
+
+   &__logo{
+      display: flex;
+      align-items: center;//end
+      justify-content: center;
+      img{
+         width: 64px;
+      }
+   }
+   &__inner{
+      display: flex;
+      // align-items: center;
+   }
+   &__col{
+      flex: 0 1 50%;
+      &:nth-child(2){
+         flex: 0 0 96px;
+         text-align: center;
+      }
+      
+   }
+   &__menu{}
+   &__menu-list{
+      display: flex;
+   }
+   &__menu-item{
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 79px;//80-1 из-за border
+      padding: 0 36px 0 16px;
+      position: relative;
+      svg{
+         position: absolute;
+         right: 16px;
+         top: 50%;
+         transform: translateY(-50%);
+      }
+      path{
+         fill: currentColor;
+      }
+      &:hover{
+         color: $color-accent;
+      }
+      &_active{
+         color: $color-accent;
+         svg{
+            transform: translateY(-50%) rotate(180deg);
+         }
+         border-bottom: 1px solid $color-accent;
+      }
+   }
+   &__right{
+      display: flex;
+      justify-content: end;
+   }
+   &__right-item{
+      background-color: transparent;
+      border: none;
+      color: white;
+      display: flex;
+      min-width: 80px;
+      height: 80px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      &:focus{
+         outline: none;
+      }
+   }
+   &__account{
+      padding: 0 36px 0 16px;
+      path{
+         fill: currentColor;
+      }
+      svg{
+         position: absolute;
+         right: 16px;
+         top: 50%;
+         transform: translateY(-50%);
+      }
+      &:hover, &:focus{
+         outline: none;
+         color: $color-accent;
+      }
+      &_active{
+         color: $color-accent;
+         svg{
+            transform: translateY(-50%) rotate(180deg);
+         }
+         border-bottom: 1px solid $color-accent;
+      }
+   }
+
+   //icons
+   &__search{
+      &:focus path{
+         fill: $color-accent;
+      }
+   }
+   &__like, &__cart{
+      &:focus path{
+         stroke: $color-accent;
+      }
+      &:focus rect{
+         fill: $color-accent;
+      }
+   }
+
+   &__sub-menu{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: 80px;//высота шапки
+   }
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" href="/favicon.ico">
+   <title>Шинный центр</title>
+   <!-- Animate -->
+   <!-- <link rel="stylesheet" href="assets/css/animate.min.css"> -->
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="container">
+            <div class="header__inner">
+               <nav class="header__menu header__col">
+                  <ul class="header__menu-list">
+                     <li class="header__menu-item header__menu-item_active" data-menu-item="products">
+                        Товары
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
+                        </svg>
+                     </li>
+                     <li class="header__menu-item" data-menu-item="services">
+                        Услуги
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
+                        </svg>
+                     </li>
+                     <li class="header__menu-item" data-menu-item="company">
+                        Компания
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
+                        </svg>
+                     </li>
+                  </ul>
+               </nav>
+               <div class="header__logo header__col">
+                  <img src="./resources/logo.svg" alt="logo">
+               </div>
+               <div class="header__right header__col">
+                  <button class="header__search header__right-item">
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.5C12 9.98528 9.98528 12 7.5 12C5.01472 12 3 9.98528 3 7.5C3 5.01472 5.01472 3 7.5 3C9.98528 3 12 5.01472 12 7.5ZM11.0195 11.7266C10.0658 12.5217 8.83875 13 7.5 13C4.46243 13 2 10.5376 2 7.5C2 4.46243 4.46243 2 7.5 2C10.5376 2 13 4.46243 13 7.5C13 8.83875 12.5217 10.0658 11.7266 11.0195L14.3536 13.6464L13.6464 14.3536L11.0195 11.7266Z" fill="white"/>
+                     </svg>
+                  </button>
+                  <button class="header__right-item header__account">
+                     Личный кабинет
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="white"/>
+                     </svg>
+                  </button>
+                  <button class="header__right-item header__like">
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.44691 3.22421L8.44705 3.22393L8.44724 3.22358L8.4529 3.21283C8.45854 3.20225 8.46791 3.18503 8.481 3.16213C8.50721 3.11627 8.54808 3.04801 8.60353 2.96485C8.71498 2.79768 8.88216 2.57495 9.10355 2.35355C9.54906 1.90805 10.1794 1.5 11 1.5C11.9257 1.5 12.7979 1.7324 13.4299 2.25911C14.0459 2.77246 14.5 3.62024 14.5 5C14.5 7.71736 13.1976 10.5325 8 14.3799C2.80237 10.5325 1.5 7.71736 1.5 5C1.5 3.62024 1.95408 2.77246 2.57009 2.25911C3.20215 1.7324 4.07429 1.5 5 1.5C5.82062 1.5 6.45095 1.90805 6.89645 2.35355C7.11784 2.57495 7.28503 2.79768 7.39648 2.96485C7.45192 3.04801 7.4928 3.11627 7.51901 3.16213C7.53209 3.18503 7.54146 3.20225 7.54711 3.21283L7.55276 3.22358L7.55309 3.22422L7.55331 3.22465L7.55334 3.2247L7.55348 3.22498L8 4.11803L8.44652 3.22498L8.44667 3.2247L8.44669 3.22465L8.44691 3.22421Z" stroke="white"/>
+                     </svg>
+                  </button>
+                  <button class="header__right-item header__cart">
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 5.5H1.5L3.5 11.5H10.5L12.5 2.5H15" stroke="white"/>
+                        <rect x="4" y="13" width="2" height="2" rx="1" fill="white"/>
+                        <rect x="8" y="13" width="2" height="2" rx="1" fill="white"/>
+                     </svg>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div class="header__sub-menu sub-menu sub-menu_hidden">
+            <div class="container">
+               <nav class="sub-menu__inner sub-menu_hidden" data-submenu-item="products">
+                  <ul class="sub-menu__list sub-menu__list_left">
+                     <li class="sub-menu__item sub-menu__item_big">
+                        <a href="#" class="sub-menu__link">
+                           <img src="resources/img/menu-car1.png" alt="автомобиль" class="sub-menu__icon">
+                           <div class="sub-menu__big-content">
+                              <div class="sub-menu__title">Автомобильные шины</div>
+                              <div class="sub-menu__tags">
+                                 <span>Летние</span>
+                                 <span>Зимние</span>
+                                 <span>Шипованые</span>
+                                 <span>Фрикционные</span>
+                                 <span>Б/у</span>
+                              </div>
+                              <div class="sub-menu__tags">
+                                 <span>R13</span>
+                                 <span>R14</span>
+                                 <span>R15</span>
+                                 <span>R16</span>
+                                 <span>R17</span>
+                                 <span>R18</span>
+                                 <span>R19</span>
+                                 <span>R20</span>
+                              </div>
+                           </div>
+                        </a>
+                     </li>
+                     <li class="sub-menu__item sub-menu__item_big">
+                        <a href="#" class="sub-menu__link">
+                           <img src="resources/img/menu-car2.png" alt="грузовой автомобиль" class="sub-menu__icon">
+                           <div class="sub-menu__big-content">
+                              <div class="sub-menu__title">Грузовые шины</div>
+                              <div class="sub-menu__tags">
+                                 <span>Ведущие</span>
+                                 <span>Универсальные</span>
+                                 <span>Рулевые</span>
+                                 <span>Прицеп</span>
+                                 <span>Рулевые + прицеп</span>
+                              </div>
+                              <div class="sub-menu__tags">
+                                 <span>R22,5</span>
+                                 <span>R24</span>
+                                 <span>R21</span>
+                                 <span>R20</span>
+                                 <span>R19,5</span>
+                              </div>
+                           </div>
+                        </a>
+                     </li>
+                     <li class="sub-menu__item sub-menu__item_big">
+                        <a href="#" class="sub-menu__link">
+                           <img src="resources/img/menu-car3.png" alt="мотоцикл" class="sub-menu__icon">
+                           <div class="sub-menu__big-content">
+                              <div class="sub-menu__title">Мотошины</div>
+                              <div class="sub-menu__tags">
+                                 <span>Спорт</span>
+                                 <span>Спорт-турист</span>
+                                 <span>Чоппер/круйзер</span>
+                                 <span>Эндуро</span>
+                                 <span>Классика</span>
+                              </div>
+                              <div class="sub-menu__tags">
+                                 <span>R12</span>
+                                 <span>R13</span>
+                                 <span>R14</span>
+                                 <span>R15</span>
+                                 <span>R16</span>
+                              </div>
+                           </div>
+                        </a>
+                     </li>
+                  </ul>
+                  <ul class="sub-menu__list">
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Аксессуары для шин, дисков и шиномонтажа</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Аккумуляторы</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Автомасла</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Автоэлектроника</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Автохимия и автокосметика</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Внешний декор, тюнинг, защита</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Инструменты и техническая помощь</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Компрессоры</a>
+                     </li>
+                  </ul>
+               </nav>
+               <nav class="sub-menu__inner sub-menu_hidden" data-submenu-item="services">
+                  <ul class="sub-menu__list sub-menu__list_left">
+                     <li class="sub-menu__item sub-menu__item_big">
+                        <a href="#" class="sub-menu__link">
+                           <img src="resources/img/menu-tire1.png" alt="автомобиль" class="sub-menu__icon">
+                           <div class="sub-menu__big-content">
+                              <div class="sub-menu__title">Шиномонтаж</div>
+                              <div class="sub-menu__tags">
+                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8ZM8.5 7.79289V4H7.5V8.20711L9.64645 10.3536L10.3536 9.64645L8.5 7.79289Z" fill="white"/>
+                                 </svg>
+                                 <span>Ежедневно с 9:00 до 21:00, без перерывов</span>
+                              </div>
+                              <div class="sub-menu__tags">
+                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 2H2V3H4V9H2V10H4V12H2V13H4V15H5V13H11V12H5V10H10C12.2091 10 14 8.20914 14 6C14 3.79086 12.2091 2 10 2H5H4ZM5 3V9H10C11.6569 9 13 7.65685 13 6C13 4.34315 11.6569 3 10 3L5 3Z" fill="white"/>
+                                 </svg>
+                                 <span>от 500 ₽</span>
+                              </div>
+                           </div>
+                        </a>
+                     </li>
+                     <li class="sub-menu__item sub-menu__item_big">
+                        <a href="#" class="sub-menu__link">
+                           <img src="resources/img/menu-tire2.png" alt="грузовой автомобиль" class="sub-menu__icon">
+                           <div class="sub-menu__big-content">
+                              <div class="sub-menu__title">Ремонт и правка дисков</div>
+                              <div class="sub-menu__tags">
+                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8ZM8.5 7.79289V4H7.5V8.20711L9.64645 10.3536L10.3536 9.64645L8.5 7.79289Z" fill="white"/>
+                                 </svg>
+                                 <span>Ежедневно с 9:00 до 21:00, без перерывов</span>
+                              </div>
+                              <div class="sub-menu__tags">
+                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 2H2V3H4V9H2V10H4V12H2V13H4V15H5V13H11V12H5V10H10C12.2091 10 14 8.20914 14 6C14 3.79086 12.2091 2 10 2H5H4ZM5 3V9H10C11.6569 9 13 7.65685 13 6C13 4.34315 11.6569 3 10 3L5 3Z" fill="white"/>
+                                 </svg>
+                                 <span>от 500 ₽</span>
+                              </div>
+                           </div>
+                        </a>
+                     </li>
+                  </ul>
+                  <ul class="sub-menu__list">
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Ошиповка зимних шин</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Сезонное хранение шин</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Сход развал</a>
+                     </li>
+                  </ul>
+               </nav>
+               <nav class="sub-menu__inner sub-menu_hidden" data-submenu-item="company">
+                  <ul class="sub-menu__list">
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">О компании</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Контакты</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Статьи и новости</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Акции и скидки</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Доставка</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Оптовым клиентам</a>
+                     </li>
+                  </ul>
+                  <ul class="sub-menu__list">
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Оплата</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Кредит</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Гарантия</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Возврат товара</a>
+                     </li>
+                     <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Подарочные сертификаты</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+         <div class="header__authorization authorization">
+            <div class="container">
+               <div class="authorization__inner">
+                  <div class="authorization__sign-in">
+                     <div class="authorization__title">Вход</div>
+                     <div class="authorization__input-inner">
+                        <input type="text" class="input authorization__input" placeholder="Ваш телефон">
+                        <button class="button">Получить код</button>
+                     </div>
+                  </div>
+                  <div class="authorization__sign-up">
+                     <div class="authorization__title">Регистрация</div>
+                     <div class="authorization__input-inner">
+                        <input type="text" class="input authorization__input" placeholder="Ваш телефон">
+                        <button class="button button_light">Получить код</button>
+                     </div>
+                     <label class="authorization__checkbox">
+                        <input type="checkbox">
+                        <span>Я подтверждаю свою дееспособность, даю согласие на получение 
+                           информации о статусе заказов и на обработку <a href="#">персональных данных.</a></span>
+                     </label>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+
+      <!-- Main -->
+      <main class="main">
+         <div class="container">
+            main
+         </div>
+      </main>
+
+
+
+      <!-- Footer -->
+      <footer class="footer">
+         <div class="container">
+            footer
+         </div>
+      </footer>
+   </div>
+
+
+   <!-- Modals -->
+
+
+
+
+
+   <!-- Initialize modal, sliders -->
+   <!-- <script src="assets/slick/slick.min.js"></script>-->
+   <script src="./script.js"></script>
+</body>
+
+</html>

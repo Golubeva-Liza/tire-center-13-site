@@ -1,0 +1,55 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'base/fonts';
+@import 'base/variables';
+
+* {
+   font-family: 'IBM Plex Sans', sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+body {
+   overflow-x: hidden;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+   position: relative;
+}
+
+.main {
+   flex: 1 0 auto;
+}
+.footer {
+   flex: 0 0 auto;
+}
+ul {
+   list-style-type: none;
+   margin: 0;
+}
+a:hover {
+   text-decoration: none;
+}
+p {
+   margin: 0;
+}
+
+.container{
+   width: calc(1280px - 28px*2);
+   margin: 0 auto;
+   padding: 0 28px;
+}
+
+@import 'components/input';
+@import 'components/button';
+
+@import 'blocks/header'; 
+@import 'blocks/sub-menu';
+@import 'blocks/authorization';

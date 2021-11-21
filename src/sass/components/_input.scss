@@ -1,0 +1,19 @@
+.input{
+   background: #FFFFFF;
+   border: 1px solid $color-dark-grey;
+   border-radius: 3px;
+   padding: 10px 16px;
+   color: $color-black;
+   font-size: 14px;
+   line-height: 16px;
+   &:hover{
+      border: 1px solid $color-accent;
+   }
+   &:hover::placeholder{
+      color: $color-accent;
+   }
+   &:focus{
+      outline: none;
+      border: 1px solid $color-accent;
+   }
+}

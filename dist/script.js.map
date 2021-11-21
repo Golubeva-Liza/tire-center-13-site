@@ -1,0 +1,1 @@
+{"version":3,"file":"script.js","mappings":";;;;;AAAAA,OAAO,CAACC,GAAR,CAAY,YAAZ,E","sources":["webpack://my/./src/js/main.js"],"sourcesContent":["console.log('Hello Liza');"],"names":["console","log"],"sourceRoot":""}
