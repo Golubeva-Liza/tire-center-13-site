@@ -40,16 +40,57 @@ a:hover {
 p {
    margin: 0;
 }
-
 .container{
-   width: calc(1280px - 28px*2);
+   width: 1280px;
    margin: 0 auto;
    padding: 0 28px;
 }
+.h1{
+   font-weight: 500;
+   font-size: 40px;
+   line-height: 48px;
+   color: #FFFFFF;
+   max-width: 600px;
+   span{
+      background-color: $color-accent;
+      box-shadow: -10px 0 0 $color-accent, 10px 0 0 $color-accent;
+   }
+}
 
+@media (max-width: $col-extra-large){
+   .container{
+      width: $col-large;
+   }
+}
+@media (max-width: $col-large){
+   .container{
+      width: $col-medium;
+   }
+}
+@media (max-width: $col-medium){//table version
+   .container{
+      width: $col-small;
+   }
+}
+@media (max-width: $col-small){
+
+}
+
+
+
+
+
+//components
 @import 'components/input';
 @import 'components/button';
 
+
+//blocks
 @import 'blocks/header'; 
 @import 'blocks/sub-menu';
 @import 'blocks/authorization';
+
+
+//sections on pages
+@import 'blocks/main/main-screen';
+

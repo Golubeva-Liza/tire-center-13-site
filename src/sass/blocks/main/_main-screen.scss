@@ -1,0 +1,47 @@
+.main-screen{
+   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../resources/img/main-bg.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 450px;
+   
+   &__container{
+      display: flex;
+      justify-content: end;
+   }
+   &__inner{
+      padding-top: 80px;
+   }
+   &__h1{
+      padding-left: 10px;
+      margin-bottom: 32px;
+   }
+   &__btn{
+      width: 150px;
+      height: 50px;
+      font-size: 16px;
+   }
+}
+
+@media (max-width: $col-extra-large){
+   .main-screen{
+      &__h1{
+         max-width: 500px;
+      }
+   }
+}
+@media (max-width: $col-large){
+   .main-screen{
+      background-size: 1000px;
+      &__h1{
+         max-width: 430px;
+      }
+   }
+}
+@media (max-width: $col-medium){//table version
+   .main-screen{
+   }
+}
+@media (max-width: $col-small){
+
+}

@@ -40,9 +40,12 @@
                   </ul>
                </nav>
                <div class="header__logo header__col">
-                  <img src="./resources/logo.svg" alt="logo">
+                  <a href="index.html"><img src="./resources/logo.svg" alt="logo"></a>
                </div>
                <div class="header__right header__col">
+                  <!-- <div class="header__search-input">
+
+                  </div> -->
                   <button class="header__search header__right-item">
                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.5C12 9.98528 9.98528 12 7.5 12C5.01472 12 3 9.98528 3 7.5C3 5.01472 5.01472 3 7.5 3C9.98528 3 12 5.01472 12 7.5ZM11.0195 11.7266C10.0658 12.5217 8.83875 13 7.5 13C4.46243 13 2 10.5376 2 7.5C2 4.46243 4.46243 2 7.5 2C10.5376 2 13 4.46243 13 7.5C13 8.83875 12.5217 10.0658 11.7266 11.0195L14.3536 13.6464L13.6464 14.3536L11.0195 11.7266Z" fill="white"/>
@@ -66,9 +69,15 @@
                         <rect x="8" y="13" width="2" height="2" rx="1" fill="white"/>
                      </svg>
                   </button>
+                  <button class="header__right-item header__account-icon">
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11 3.85714C11 4.67992 10.6387 5.76733 10.0131 6.64846C9.37486 7.54727 8.63757 8 8 8C7.36243 8 6.62514 7.54727 5.98693 6.64846C5.36128 5.76733 5 4.67992 5 3.85714C5 2.31315 6.30856 1 8 1C9.69144 1 11 2.31315 11 3.85714ZM12 3.85714C12 5.98738 10.2091 9 8 9C5.79086 9 4 5.98738 4 3.85714C4 1.7269 5.79086 0 8 0C10.2091 0 12 1.7269 12 3.85714ZM8 10C6.99425 10 6.12139 10.0311 5.38164 10.1379C4.64288 10.2447 4.00141 10.4315 3.47962 10.7669C2.3841 11.4712 2 12.6989 2 14.5V14.7676L2.22265 14.916L2.5 14.5C2.22265 14.916 2.22291 14.9162 2.22317 14.9164L2.22372 14.9167L2.22493 14.9175L2.22777 14.9194L2.23514 14.9242L2.25675 14.9377C2.27422 14.9484 2.29788 14.9624 2.32796 14.9792C2.38814 15.0129 2.47396 15.0579 2.58735 15.1102C2.81419 15.2149 3.15085 15.3488 3.61264 15.4808C4.53648 15.7447 5.95809 16 8 16C10.0419 16 11.4635 15.7447 12.3874 15.4808C12.8492 15.3488 13.1858 15.2149 13.4127 15.1102C13.526 15.0579 13.6119 15.0129 13.672 14.9792C13.7021 14.9624 13.7258 14.9484 13.7433 14.9377L13.7649 14.9242L13.7722 14.9194L13.7751 14.9175L13.7763 14.9167L13.7768 14.9164C13.7771 14.9162 13.7774 14.916 13.5 14.5L13.7774 14.916L14 14.7676V14.5C14 12.6989 13.6159 11.4712 12.5204 10.7669C11.9986 10.4315 11.3571 10.2447 10.6184 10.1379C9.87861 10.0311 9.00575 10 8 10ZM3.0064 14.2023L3.00402 14.2012C3.04542 12.7088 3.40557 12.0033 4.02038 11.6081C4.37359 11.381 4.85712 11.2241 5.52461 11.1277C6.19111 11.0314 7.00575 11 8 11C8.99425 11 9.80889 11.0314 10.4754 11.1277C11.1429 11.2241 11.6264 11.381 11.9796 11.6081C12.5944 12.0033 12.9546 12.7088 12.996 14.2012L12.9936 14.2023C12.8142 14.2851 12.5258 14.4012 12.1126 14.5192C11.2865 14.7553 9.95809 15 8 15C6.04191 15 4.71352 14.7553 3.88736 14.5192C3.47415 14.4012 3.18581 14.2851 3.0064 14.2023Z" fill="white"/>
+                     </svg>
+                  </button>
                </div>
             </div>
          </div>
+         <!-- sub-menu_hidden -->
          <div class="header__sub-menu sub-menu sub-menu_hidden">
             <div class="container">
                <nav class="sub-menu__inner sub-menu_hidden" data-submenu-item="products">
@@ -266,7 +275,7 @@
                </nav>
             </div>
          </div>
-         <div class="header__authorization authorization">
+         <div class="header__authorization authorization sub-menu_hidden">
             <div class="container">
                <div class="authorization__inner">
                   <div class="authorization__sign-in">
@@ -295,9 +304,28 @@
 
       <!-- Main -->
       <main class="main">
-         <div class="container">
-            main
-         </div>
+         <section class="main-screen">
+            <div class="container main-screen__container">
+               <div class="main-screen__inner">
+                  <h1 class="h1 main-screen__h1">
+                     <span>Шиномонтаж и&nbsp;доставка бесплатно</span>
+                  </h1>
+                  <button class="button button_light main-screen__btn">Подробнее</button>
+               </div>
+            </div>
+         </section>
+
+         <section class="search-parameters">
+            <div class="container search-parameters__container">
+               <!-- <div class="main-screen__inner">
+                  <h3 class="h1 main-screen__h1">
+                     Подберём <span>шины</span> или <a href="#">диски</a> по <span>марке автомобиля</span> или <a href="#">параметрам товара</a>
+                  </h3>
+                  
+               </div> -->
+            </div>
+         </section>
+         
       </main>
 
 

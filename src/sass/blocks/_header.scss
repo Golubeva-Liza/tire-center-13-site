@@ -108,18 +108,21 @@
          border-bottom: 1px solid $color-accent;
       }
    }
+   &__account-icon{
+      display: none;
+   }
 
    //icons
-   &__search{
-      &:focus path{
+   &__search, &__account-icon{
+      &:focus path, &:hover path{
          fill: $color-accent;
       }
    }
    &__like, &__cart{
-      &:focus path{
+      &:focus path, &:hover path{
          stroke: $color-accent;
       }
-      &:focus rect{
+      &:focus rect, &:hover rect{
          fill: $color-accent;
       }
    }
@@ -130,4 +133,30 @@
       width: 100%;
       top: 80px;//высота шапки
    }
+}
+
+
+@media (max-width: $col-extra-large){}
+@media (max-width: $col-large){
+   .header{
+      &__account-icon{
+         display: block;
+      }
+      &__account, &__like, &__cart{
+         display: none;
+      }
+      &__menu-item{
+         padding: 0 24px 0 12px;
+         svg{
+            right: 6px;
+         }
+      }
+   }
+}
+@media (max-width: $col-medium){//table version
+   .header{
+   }
+}
+@media (max-width: $col-small){
+
 }
