@@ -16,12 +16,16 @@
    transition: all .3s;
    &:hover{
       background-color: $color-light-blue;
+      color: #FFFFFF;
    }
    &:focus{
       outline: none;
       background-color: $color-blue-focus;
    }
 
+   &_main{
+      width: 232px;
+   }
    &_light{
       background: #FFFFFF;
       border: 1px solid #EFD8C3;

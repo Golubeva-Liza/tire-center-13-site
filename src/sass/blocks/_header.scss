@@ -3,18 +3,6 @@
    background-color: $color-black;
    color: white;
    position: relative;
-   // &:before{
-   //    content: '';
-   //    width: 96px;
-   //    height: 96px;
-   //    position: absolute;
-   //    top: 0;
-   //    left: 50%;
-   //    transform: translateX(-50%);
-   //    background-color: $color-black;
-   //    z-index: -1;
-   //    border-radius: 16px;
-   // }
 
    &__logo{
       display: flex;
@@ -26,17 +14,63 @@
    }
    &__inner{
       display: flex;
-      // align-items: center;
    }
    &__col{
       flex: 0 1 50%;
-      &:nth-child(2){
+      &:nth-child(3){
          flex: 0 0 96px;
          text-align: center;
       }
-      
    }
-   &__menu{}
+
+   //кнопка меню при размерах экрана под планшет
+   &__menu-btn{
+      display: none;
+      button{
+         background: transparent;
+         line-height: 79px;//80-1 из-за border
+         padding: 0 16px;
+         border: none;
+         font-weight: 500;
+         color: #FFFFFF;
+         display: flex;
+         align-items: center;
+         &_active{
+            color: $color-accent;
+            border-bottom: 1px solid $color-accent;
+         }
+         &:focus{
+            outline: none;
+            color: $color-accent;
+         }
+      }
+   }
+   &__burger{
+      margin-right: 10px;
+      span{
+         position: relative;
+         display: block;
+         height: 1px;
+         width: 14px;
+         background-color: currentColor;
+         &::before, &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 1px;
+            width: 18px;
+            background-color: currentColor;
+         }
+         &::before{
+            top: 5px;
+         }
+         &::after{
+            top: -5px;
+         }
+      }
+   }
+
+
    &__menu-list{
       display: flex;
    }
@@ -59,13 +93,13 @@
       &:hover{
          color: $color-accent;
       }
-      &_active{
-         color: $color-accent;
-         svg{
-            transform: translateY(-50%) rotate(180deg);
-         }
-         border-bottom: 1px solid $color-accent;
+   }
+   .active{
+      color: $color-accent;
+      svg{
+         transform: translateY(-50%) rotate(180deg);
       }
+      border-bottom: 1px solid $color-accent;
    }
    &__right{
       display: flex;
@@ -100,13 +134,6 @@
          outline: none;
          color: $color-accent;
       }
-      &_active{
-         color: $color-accent;
-         svg{
-            transform: translateY(-50%) rotate(180deg);
-         }
-         border-bottom: 1px solid $color-accent;
-      }
    }
    &__account-icon{
       display: none;
@@ -139,10 +166,10 @@
 @media (max-width: $col-extra-large){}
 @media (max-width: $col-large){
    .header{
-      &__account-icon{
+      &__account-icon, &__menu-btn{
          display: block;
       }
-      &__account, &__like, &__cart{
+      &__account, &__like, &__cart, &__menu{
          display: none;
       }
       &__menu-item{

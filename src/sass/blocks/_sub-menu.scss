@@ -1,9 +1,10 @@
 .sub-menu{
+   display: none;
    padding: 32px 0 48px 0;
    background-color: $color-dark-blue;
 
-   &_hidden{
-      display: none !important;
+   &_active{
+      display: block !important;
    }
 
    &__inner{

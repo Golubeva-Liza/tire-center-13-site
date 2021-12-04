@@ -83,14 +83,17 @@ p {
 //components
 @import 'components/input';
 @import 'components/button';
+@import 'components/select';
 
 
 //blocks
 @import 'blocks/header'; 
 @import 'blocks/sub-menu';
+@import 'blocks/mobile-menu';
 @import 'blocks/authorization';
 
 
 //sections on pages
 @import 'blocks/main/main-screen';
+@import 'blocks/main/search-parameters';
 

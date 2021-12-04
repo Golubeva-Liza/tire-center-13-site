@@ -1,0 +1,39 @@
+.search-parameters{
+   padding-top: 24px;
+   margin-bottom: 40px;
+   &__inner{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 32px;
+      border-bottom: 1px solid $color-dark-grey;
+   }
+   &__h3{
+      font-size: 18px;
+      line-height: 32px;
+      margin-bottom: 8px;
+      font-weight: 500;
+   }
+   &__item{
+      color: $color-light-blue;
+      cursor: pointer;
+      border-bottom: 1px dashed $color-light-blue;
+      &_active{
+         color: $color-black;
+         border-bottom: 1px solid $color-accent;
+         cursor: text;
+      }
+   }
+   &__inputs-container{
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      .select:not(:last-child){
+         margin-right: 24px;
+      }
+      .select{
+         margin-top: 16px;
+      }
+   }
+}

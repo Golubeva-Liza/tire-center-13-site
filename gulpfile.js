@@ -8,15 +8,26 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const htmlmin = require('gulp-htmlmin');
+const fileinclude = require('gulp-file-include');
 
 const dist = "./dist/";
 
 gulp.task('html', function () {
-  return gulp.src("src/*.html")
+  return gulp.src("dist/**/*.html")
       .pipe(htmlmin({ collapseWhitespace: true }))
       .pipe(gulp.dest("dist/"))
       .on("end", browserSync.reload);
 });
+
+gulp.task('fileinclude', function() {
+   gulp.src(['src/*.html'])
+     .pipe(fileinclude({
+       prefix: '@@',
+       basepath: '@file'
+     }))
+     .pipe(gulp.dest('dist/'))
+     .on("end", gulp.parallel(browserSync.reload));
+ });
 
 gulp.task('styles', function() {
   return gulp.src("src/sass/**/*.+(scss|sass)")
@@ -73,10 +84,10 @@ gulp.task("watch", () => {
 		notify: true
     });
     
-    gulp.watch("src/*.html").on('change', gulp.parallel('html'));
+   //  gulp.watch("src/*.html").on('change', gulp.parallel('html'));
     gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
     gulp.watch("./src/resources/**/*.*", gulp.parallel("copy-resources"));
-
+    gulp.watch(['src/html/**/*.html']).on("change", gulp.parallel("fileinclude"));
     gulp.watch("./src/js/**/*.js", gulp.parallel("build-js"));
 });
 
@@ -108,4 +119,4 @@ gulp.task("build-prod-js", () => {
       .pipe(gulp.dest(dist));
 });
 
-gulp.task('default', gulp.parallel('watch', 'copy-resources', 'styles', 'html', "build-js"));
+gulp.task('default', gulp.parallel('watch', 'fileinclude', 'copy-resources', 'styles', "build-js"));
