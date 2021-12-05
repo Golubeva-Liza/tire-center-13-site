@@ -22,9 +22,38 @@
          text-align: center;
       }
    }
+   &__menu-btn{
+      @include reset-button;
+      position: relative;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 79px;//80-1 из-за border
+      padding: 0 36px 0 16px;
+      color: #FFFFFF;
+      svg{
+         position: absolute;
+         right: 16px;
+         top: 50%;
+         transform: translateY(-50%);
+      }
+      path{
+         fill: currentColor;
+      }
+      &:hover, &:focus{
+         color: $color-accent;
+      }
+   }
+   .active{
+      color: $color-accent;
+      svg{
+         transform: translateY(-50%) rotate(180deg);
+      }
+      border-bottom: 1px solid $color-accent;
+   }
 
    //кнопка меню при размерах экрана под планшет
-   &__menu-btn{
+   &__mobile-btn{
       display: none;
       button{
          background: transparent;
@@ -75,31 +104,7 @@
       display: flex;
    }
    &__menu-item{
-      cursor: pointer;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 79px;//80-1 из-за border
-      padding: 0 36px 0 16px;
-      position: relative;
-      svg{
-         position: absolute;
-         right: 16px;
-         top: 50%;
-         transform: translateY(-50%);
-      }
-      path{
-         fill: currentColor;
-      }
-      &:hover{
-         color: $color-accent;
-      }
-   }
-   .active{
-      color: $color-accent;
-      svg{
-         transform: translateY(-50%) rotate(180deg);
-      }
-      border-bottom: 1px solid $color-accent;
+      
    }
    &__right{
       display: flex;
@@ -119,6 +124,8 @@
          outline: none;
       }
    }
+
+   
    &__account{
       padding: 0 36px 0 16px;
       path{
@@ -140,7 +147,7 @@
    }
 
    //icons
-   &__search, &__account-icon{
+   &__search-icon, &__account-icon{
       &:focus path, &:hover path{
          fill: $color-accent;
       }
@@ -166,7 +173,7 @@
 @media (max-width: $col-extra-large){}
 @media (max-width: $col-large){
    .header{
-      &__account-icon, &__menu-btn{
+      &__account-icon, &__menu-btn, &__mobile-btn{
          display: block;
       }
       &__account, &__like, &__cart, &__menu{

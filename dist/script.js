@@ -2,6 +2,25 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/components/headerSearch.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/headerSearch.js ***!
+  \*******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+function headerSelect() {
+  const searchIcon = document.querySelector('.header-search__icon');
+  console.log(searchIcon);
+  searchIcon.addEventListener('click', () => {
+    searchIcon.closest('.header-search').classList.toggle('header-search_active');
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (headerSelect);
+
+/***/ }),
+
 /***/ "./src/js/components/headerSelect.js":
 /*!*******************************************!*\
   !*** ./src/js/components/headerSelect.js ***!
@@ -11,34 +30,38 @@
 __webpack_require__.r(__webpack_exports__);
 function headerSelect() {
   const header = document.querySelector('.header');
-  const menuItems = header.querySelectorAll('[data-menu-item]');
-  menuItems.forEach(item => {
+  const menuBtns = header.querySelectorAll('[data-menu-item]');
+  const submenu = header.querySelectorAll('[data-submenu-item]');
+  menuBtns.forEach(item => {
     item.addEventListener('click', () => {
-      const menuName = item.getAttribute('data-menu-item');
-      header.querySelector(`[data-submenu-item = "${menuName}"]`).classList.toggle('sub-menu_active');
-      item.classList.toggle('active'); // document.addEventListener('click', closeSubMenu);
+      const currentMenuName = item.getAttribute('data-menu-item');
+      const currentDrop = header.querySelector(`[data-submenu-item = "${currentMenuName}"]`);
+      menuBtns.forEach(el => {
+        if (el !== item) {
+          el.classList.remove('active');
+        }
+      });
+      submenu.forEach(el => {
+        if (el !== currentDrop) {
+          el.classList.remove('sub-menu_active');
+        }
+      });
+      currentDrop.classList.toggle('sub-menu_active');
+      item.classList.toggle('active');
+      document.addEventListener('click', closeSubMenu);
     });
   });
 
   function closeSubMenu(e) {
-    console.log(e.target);
-    const openedSubMenu = header.querySelector('.sub-menu_active');
-    const openedMenu = header.querySelector('.header__menu-item_active');
-
-    if (openedSubMenu) {
-      const openedSubMenuVal = openedSubMenu.getAttribute('data-submenu-item');
-
-      if (!e.target.classList.contains('sub-menu') && !e.target.closest('.sub-menu') && e.target.getAttribute('data-menu-item') != openedSubMenuVal) {
-        console.log('закрыть');
-        header.querySelector(`[data-submenu-item = "${openedSubMenuVal}"]`).classList.remove('sub-menu_active');
-        openedMenu.classList.remove('header__menu-item_active'); // if (openedSubMenuVal != "account"){
-        //    openedMenu.classList.remove('header__menu-item_active');
-        // } else {
-        //    openedMenu.classList.remove('header__account_active');
-        // }
-
-        document.removeEventListener('click', closeSubMenu);
-      }
+    if (!e.target.closest('.header__menu-item') && !e.target.closest('.header__mobile-btn') && !e.target.closest('.authorization')) {
+      // console.log('закрыть');
+      menuBtns.forEach(el => {
+        el.classList.remove('active');
+      });
+      submenu.forEach(el => {
+        el.classList.remove('sub-menu_active');
+      });
+      document.removeEventListener('click', closeSubMenu);
     }
   }
 }
@@ -239,6 +262,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/select */ "./src/js/components/select.js");
 /* harmony import */ var _components_headerSelect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/headerSelect */ "./src/js/components/headerSelect.js");
+/* harmony import */ var _components_headerSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/headerSearch */ "./src/js/components/headerSearch.js");
+
 
  //settings
 
@@ -314,6 +339,7 @@ new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-car-body', {
 }); //functions
 
 (0,_components_headerSelect__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_components_headerSearch__WEBPACK_IMPORTED_MODULE_2__["default"])();
 }();
 /******/ })()
 ;

@@ -4,33 +4,68 @@
          <!-- левое меню -->
          <nav class="header__menu header__col">
             <ul class="header__menu-list">
-               <li class="header__menu-item" data-menu-item="products">
-                  Товары
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
-                  </svg>
+               <li class="header__menu-item">
+                  <button class="header__menu-btn" data-menu-item="products">
+                     Товары
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
+                     </svg>
+                  </button>
+                  @@include('submenu/products.html')
                </li>
-               <li class="header__menu-item" data-menu-item="services">
-                  Услуги
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
-                  </svg>
+               <li class="header__menu-item">
+                  <button class="header__menu-btn" data-menu-item="services">
+                     Услуги
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
+                     </svg>
+                  </button>
+                  @@include('submenu/services.html')
                </li>
-               <li class="header__menu-item" data-menu-item="company">
-                  Компания
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
-                  </svg>
+               <li class="header__menu-item">
+                  <button class="header__menu-btn" data-menu-item="company">
+                     Компания
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
+                     </svg>
+                  </button>
+                  @@include('submenu/company.html')
                </li>
             </ul>
          </nav>
-         <div class="header__menu-btn header__col" >
+         <div class="header__mobile-btn header__col" >
             <button data-menu-item="menu">
                <div class="header__burger">
                   <span></span>
                </div>
                Меню
             </button>
+            <div class="mobile-menu sub-menu" data-submenu-item="menu">
+               <div class="container">
+                  <nav class="mobile-menu__inner">
+                     <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item mobile-menu__item_active" data-mobile-menu="products">
+                           Товары
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
+                           </svg>
+                        </li>
+                        <li class="mobile-menu__item" data-mobile-menu="services">
+                           Услуги
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
+                           </svg>
+                        </li>
+                        <li class="mobile-menu__item" data-mobile-menu="company">
+                           Компания
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
+                           </svg>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
          </div>
          
 
@@ -41,20 +76,33 @@
 
          <!-- правая часть шапки -->
          <div class="header__right header__col">
-            <!-- <div class="header__search-input">
-
-            </div> -->
-            <button class="header__search header__right-item">
-               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.5C12 9.98528 9.98528 12 7.5 12C5.01472 12 3 9.98528 3 7.5C3 5.01472 5.01472 3 7.5 3C9.98528 3 12 5.01472 12 7.5ZM11.0195 11.7266C10.0658 12.5217 8.83875 13 7.5 13C4.46243 13 2 10.5376 2 7.5C2 4.46243 4.46243 2 7.5 2C10.5376 2 13 4.46243 13 7.5C13 8.83875 12.5217 10.0658 11.7266 11.0195L14.3536 13.6464L13.6464 14.3536L11.0195 11.7266Z" fill="white"/>
-               </svg>
-            </button>
-            <button class="header__right-item header__account" data-menu-item="account">
+            <div class="header-search header__search">
+               <button class="header__right-item header-search__icon header__search-icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.5C12 9.98528 9.98528 12 7.5 12C5.01472 12 3 9.98528 3 7.5C3 5.01472 5.01472 3 7.5 3C9.98528 3 12 5.01472 12 7.5ZM11.0195 11.7266C10.0658 12.5217 8.83875 13 7.5 13C4.46243 13 2 10.5376 2 7.5C2 4.46243 4.46243 2 7.5 2C10.5376 2 13 4.46243 13 7.5C13 8.83875 12.5217 10.0658 11.7266 11.0195L14.3536 13.6464L13.6464 14.3536L11.0195 11.7266Z" fill="white"/>
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8 8.72222L14.2778 15L15 14.2778L8.72222 8L15 1.72222L14.2778 1L8 7.27778L1.72222 1L1 1.72222L7.27778 8L1 14.2778L1.72222 15L8 8.72222Z" fill="white"/>
+                  </svg>
+               </button>
+               <div class="header-search__inner">
+                  <div class="header-search__field">
+                     <input type="text" class="header-search__input" placeholder="Введите название товара или услуги">
+                     <button class="header-search__btn">Найти</button>
+                  </div>
+               </div>
+            </div>
+            <button class="header__right-item header__account header__menu-item" data-menu-item="account">
                Личный кабинет
                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="white"/>
                </svg>
             </button>
+            <div class="header__authorization authorization sub-menu" data-submenu-item="account">
+               <div class="container">
+                  @@include('submenu/authorization.html')
+               </div>
+            </div>
             <button class="header__right-item header__like">
                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8.44691 3.22421L8.44705 3.22393L8.44724 3.22358L8.4529 3.21283C8.45854 3.20225 8.46791 3.18503 8.481 3.16213C8.50721 3.11627 8.54808 3.04801 8.60353 2.96485C8.71498 2.79768 8.88216 2.57495 9.10355 2.35355C9.54906 1.90805 10.1794 1.5 11 1.5C11.9257 1.5 12.7979 1.7324 13.4299 2.25911C14.0459 2.77246 14.5 3.62024 14.5 5C14.5 7.71736 13.1976 10.5325 8 14.3799C2.80237 10.5325 1.5 7.71736 1.5 5C1.5 3.62024 1.95408 2.77246 2.57009 2.25911C3.20215 1.7324 4.07429 1.5 5 1.5C5.82062 1.5 6.45095 1.90805 6.89645 2.35355C7.11784 2.57495 7.28503 2.79768 7.39648 2.96485C7.45192 3.04801 7.4928 3.11627 7.51901 3.16213C7.53209 3.18503 7.54146 3.20225 7.54711 3.21283L7.55276 3.22358L7.55309 3.22422L7.55331 3.22465L7.55334 3.2247L7.55348 3.22498L8 4.11803L8.44652 3.22498L8.44667 3.2247L8.44669 3.22465L8.44691 3.22421Z" stroke="white"/>
@@ -75,55 +123,5 @@
          </div>
       </div>
    </div>
-   
-   <!-- выпадающее меню -->
-   <div class="header__sub-menu sub-menu" data-submenu-item="products">
-      <div class="container">
-         @@include('submenu/products.html')
-      </div>
-   </div>
-   <div class="header__sub-menu sub-menu" data-submenu-item="services">
-      <div class="container">
-         @@include('submenu/services.html')
-      </div>
-   </div>
-   <div class="header__sub-menu sub-menu" data-submenu-item="company">
-      <div class="container">
-         @@include('submenu/company.html')
-      </div>
-   </div>
-   <div class="header__authorization authorization sub-menu" data-submenu-item="account">
-      <div class="container">
-         @@include('submenu/authorization.html')
-      </div>
-   </div>
-   <div class="mobile-menu sub-menu" data-submenu-item="menu">
-      <div class="container">
-         <nav class="mobile-menu__inner">
-            <ul class="mobile-menu__list">
-               <li class="mobile-menu__item mobile-menu__item_active" data-mobile-menu="products">
-                  Товары
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
-                  </svg>
-               </li>
-               <!-- <div class="mobile-menu__submenu">
 
-               </div> -->
-               <li class="mobile-menu__item" data-mobile-menu="services">
-                  Услуги
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
-                  </svg>
-               </li>
-               <li class="mobile-menu__item" data-mobile-menu="company">
-                  Компания
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
-                  </svg>
-               </li>
-            </ul>
-         </nav>
-      </div>
-   </div>
 </header>

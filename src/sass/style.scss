@@ -1,6 +1,7 @@
 @import 'libs/bootstrap-reboot.min';
 @import 'base/fonts';
 @import 'base/variables';
+@import 'base/mixins';
 
 * {
    font-family: 'IBM Plex Sans', sans-serif;
@@ -91,6 +92,7 @@ p {
 @import 'blocks/sub-menu';
 @import 'blocks/mobile-menu';
 @import 'blocks/authorization';
+@import 'blocks/header-search';
 
 
 //sections on pages

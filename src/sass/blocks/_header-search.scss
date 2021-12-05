@@ -1,0 +1,131 @@
+.header-search{
+   position: relative;
+   &_active{
+      .header-search__inner{
+         width: 804px;
+         // transition-delay: 0s;
+      }
+      .header-search__field{
+         padding-left: 48px;
+         transition-delay: 0s;
+      }
+      .header-search__input{
+         opacity: 1;
+      }
+      .header-search__btn, .header-search__field::before{
+         transform: scale(1);
+      }
+      .header-search__input, .header-search__btn, .header-search__field::before{
+         transition-delay: .1s;
+      }
+      .header-search__icon{
+         svg:last-child{
+            width: 16px;
+            height: 16px;
+            transition-delay: .3s;
+         }
+         svg:first-child{
+            width: 0;
+            height: 0;
+            transition-delay: 0s;
+         }
+      }
+
+   }
+   &__inner{
+      height: 80px;
+      width: 0px;
+      background-color: $color-black;
+      position: absolute;
+      top: 0;
+      right: 80px;
+      display: flex;
+      align-items: center;
+
+      transition: width .5s;
+      // transition-delay: .5s;
+   }
+   &__field{
+      height: 48px;
+      width: 100%;
+      background-color: $color-dark-blue;
+      border-radius: 4px;
+      // padding-left: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      &::before{
+         transform: scale(0);
+         content: '';
+         background-image: url('../../resources/icons/search.svg');
+         background-repeat: no-repeat;
+         background-size: cover;
+         position: absolute;
+         top: 16px;
+         left: 16px;
+         width: 16px;
+         height: 16px;
+      }
+   }
+   &__input{
+      opacity: 0;
+      height: 24px;
+      width: calc(100% - 100px);
+      background-color: transparent;
+      border: none;
+      color: #FFFFFF;
+      &:focus{
+         outline: none;
+      }
+   }
+   &__btn{
+      transform: scale(0);
+      @include reset-button;
+      color: $color-accent;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      padding: 16px;
+      transition: color .3s;
+      &:hover{
+         color: $color-light-blue;
+      }
+   }
+   &__field, &__input, &__btn, &__field::before{
+      transition: all .5s;
+      transition-delay: 0s;
+   }
+   &__icon{
+      svg:last-child{
+         width: 0;
+         height: 0;
+         transition-delay: 0s;
+      }
+      svg:first-child{
+         transition-delay: .3s;
+      }
+      svg{
+         transition: all .3s;
+      }
+   }
+}
+
+@media (max-width: $col-extra-large){
+   .header-search{
+      &_active{
+         .header-search__inner{
+            width: 515px;
+         }
+      }
+   }
+}
+@media (max-width: $col-large){
+   .header-search{
+      &_active{
+         .header-search__inner{
+            width: 552px;
+         }
+      }
+   }
+}

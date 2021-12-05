@@ -1,36 +1,46 @@
 function headerSelect(){
    const header = document.querySelector('.header');
-   const menuItems = header.querySelectorAll('[data-menu-item]');
+   const menuBtns= header.querySelectorAll('[data-menu-item]');
+   const submenu= header.querySelectorAll('[data-submenu-item]');
 
-   menuItems.forEach(item => {
+   menuBtns.forEach(item => {
       item.addEventListener('click', () => {
-         const menuName = item.getAttribute('data-menu-item');
-         header.querySelector(`[data-submenu-item = "${menuName}"]`).classList.toggle('sub-menu_active');
+         const currentMenuName = item.getAttribute('data-menu-item');
+         const currentDrop = header.querySelector(`[data-submenu-item = "${currentMenuName}"]`);
+
+         menuBtns.forEach(el => {
+            if (el !== item){
+               el.classList.remove('active');
+            }
+         });
+
+         submenu.forEach(el => {
+            if (el !== currentDrop){
+               el.classList.remove('sub-menu_active');
+            }
+         });
+
+         currentDrop.classList.toggle('sub-menu_active');
          item.classList.toggle('active');
 
-         // document.addEventListener('click', closeSubMenu);
+         document.addEventListener('click', closeSubMenu);
       })
    })
 
    function closeSubMenu (e){
-      console.log(e.target);
 
-      const openedSubMenu = header.querySelector('.sub-menu_active');
-      const openedMenu = header.querySelector('.header__menu-item_active');
-      if (openedSubMenu){
-         const openedSubMenuVal = openedSubMenu.getAttribute('data-submenu-item');
+      if (!e.target.closest('.header__menu-item') && !e.target.closest('.header__mobile-btn') && !e.target.closest('.authorization')){
+         // console.log('закрыть');
 
-         if (!e.target.classList.contains('sub-menu') && !e.target.closest('.sub-menu') && e.target.getAttribute('data-menu-item') != openedSubMenuVal){
-            console.log('закрыть');
-            header.querySelector(`[data-submenu-item = "${openedSubMenuVal}"]`).classList.remove('sub-menu_active');
-            openedMenu.classList.remove('header__menu-item_active');
-            // if (openedSubMenuVal != "account"){
-            //    openedMenu.classList.remove('header__menu-item_active');
-            // } else {
-            //    openedMenu.classList.remove('header__account_active');
-            // }
-            document.removeEventListener('click', closeSubMenu);
-         } 
+         menuBtns.forEach(el => {
+            el.classList.remove('active');
+         });
+
+         submenu.forEach(el => {
+            el.classList.remove('sub-menu_active');
+         });
+
+         document.removeEventListener('click', closeSubMenu);
       }
    }
 }

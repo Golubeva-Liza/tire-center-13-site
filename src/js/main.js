@@ -1,5 +1,6 @@
 import {Select} from './components/select';
 import headerSelect from './components/headerSelect';
+import headerSearch from './components/headerSearch';
 
 
 //settings
@@ -53,4 +54,5 @@ new Select('#select-car-body', {
 
 //functions
 headerSelect();
+headerSearch();
 
