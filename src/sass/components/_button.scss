@@ -2,16 +2,15 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 12px 24px;
-   height: 40px;
-   padding: 0 24px;
+   height: 2.5rem;
+   padding: 0 1.5rem;
    background-color: $color-accent;
    border-radius: 3px;
    border: none;
    outline: none;
    font-weight: 500;
    font-size: 14px;
-   line-height: 16px;
+   line-height: 1rem;
    color: #FFFFFF;
    transition: all .3s;
    &:hover{
@@ -25,6 +24,9 @@
 
    &_main{
       width: 232px;
+   }
+   &_center{
+      margin: 0 auto;
    }
    &_light{
       background: #FFFFFF;

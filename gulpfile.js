@@ -88,6 +88,7 @@ gulp.task("watch", () => {
     gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
     gulp.watch("./src/resources/**/*.*", gulp.parallel("copy-resources"));
     gulp.watch(['src/html/**/*.html']).on("change", gulp.parallel("fileinclude"));
+    gulp.watch(['src/*.html']).on("change", gulp.parallel("fileinclude"));
     gulp.watch("./src/js/**/*.js", gulp.parallel("build-js"));
 });
 

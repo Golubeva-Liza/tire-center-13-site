@@ -1,5 +1,5 @@
 .header{
-   height: 80px;
+   height: 5rem;
    background-color: $color-black;
    color: white;
    position: relative;
@@ -9,7 +9,7 @@
       align-items: center;//end
       justify-content: center;
       img{
-         width: 64px;
+         width: 4rem;
       }
    }
    &__inner{
@@ -22,18 +22,21 @@
          text-align: center;
       }
    }
+   &__menu{
+      z-index: 100;
+   }
    &__menu-btn{
       @include reset-button;
       position: relative;
       cursor: pointer;
       font-weight: 500;
-      font-size: 16px;
-      line-height: 79px;//80-1 из-за border
-      padding: 0 36px 0 16px;
+      font-size: 1rem;
+      line-height: calc(5rem - 1px);//80-1 из-за border
+      padding: 0 36px 0 1rem;
       color: #FFFFFF;
       svg{
          position: absolute;
-         right: 16px;
+         right: 1rem;
          top: 50%;
          transform: translateY(-50%);
       }
@@ -57,8 +60,8 @@
       display: none;
       button{
          background: transparent;
-         line-height: 79px;//80-1 из-за border
-         padding: 0 16px;
+         line-height: calc(5rem - 1px);//80-1 из-за border
+         padding: 0 1rem;
          border: none;
          font-weight: 500;
          color: #FFFFFF;
@@ -115,8 +118,8 @@
       border: none;
       color: white;
       display: flex;
-      min-width: 80px;
-      height: 80px;
+      min-width: 5rem;
+      height: 5rem;
       align-items: center;
       justify-content: center;
       position: relative;
@@ -127,13 +130,13 @@
 
    
    &__account{
-      padding: 0 36px 0 16px;
+      padding: 0 36px 0 1rem;
       path{
          fill: currentColor;
       }
       svg{
          position: absolute;
-         right: 16px;
+         right: 1rem;
          top: 50%;
          transform: translateY(-50%);
       }
@@ -165,7 +168,7 @@
       position: absolute;
       left: 0;
       width: 100%;
-      top: 80px;//высота шапки
+      top: 5rem;//высота шапки
    }
 }
 
@@ -180,15 +183,56 @@
          display: none;
       }
       &__menu-item{
-         padding: 0 24px 0 12px;
+         padding: 0 1.5rem 0 0.75rem;
          svg{
             right: 6px;
+         }
+      }
+      &__menu{
+         padding: 2rem 0 3rem 0;
+         background-color: #2b3143;
+         position: absolute;
+         top: 5rem;
+         left: 0;
+         width: 100%;
+      }
+      &__menu-list{
+         width: $col-medium;
+         margin: 0 auto;
+         padding: 0 28px;
+         display: block;
+      }
+      &__menu-item{
+         font-weight: 500;
+         font-size: 18px;
+         line-height: 2.5rem;
+         padding: 0.5rem 0;
+         position: relative;
+         padding: 0;
+         &:not(:last-child){
+            margin-bottom: 1.5rem;
+         }
+      }
+      &__menu-btn{
+         border-bottom: 1px solid #3E465F;
+         width: 100%;
+         display: flex;
+         line-height: 2.5rem;
+         padding: 0;
+         svg{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
          }
       }
    }
 }
 @media (max-width: $col-medium){//table version
    .header{
+      &__menu-list{
+         width: $col-small;
+      }
    }
 }
 @media (max-width: $col-small){

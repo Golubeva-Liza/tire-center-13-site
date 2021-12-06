@@ -1,9 +1,9 @@
 .sub-menu{
    display: none;
-   padding: 32px 0 48px 0;
+   padding: 2rem 0 3rem 0;
    background-color: $color-dark-blue;
    position: absolute;
-   top: 80px;
+   top: 5rem;
    left: 0;
    width: 100%;
 
@@ -27,13 +27,13 @@
    }
    &__item{
       font-weight: 500;
-      font-size: 16px;
-      line-height: 48px;
+      font-size: 1rem;
+      line-height: 3rem;
       width: 100%;
       border-bottom: 1px solid #3E465F;
       &_big{
-         line-height: 24px;
-         padding-bottom: 23px;
+         line-height: 1.5rem;
+         padding-bottom: 1.5rem;
          &:not(:first-child){
             margin-top: 30px;
          }
@@ -54,10 +54,10 @@
    }
    &__title{
       font-weight: 500;
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 1.5rem;
+      line-height: 2rem;
       color: $color-accent;
-      margin-bottom: 15px;
+      margin-bottom: 1rem;
    }
    &__tags{
       display: flex;
@@ -70,14 +70,14 @@
          font-weight: 400;
          color: $color-dark-grey;
          font-size: 14px;
-         line-height: 16px;
-         margin-right: 8px;
+         line-height: 1rem;
+         margin-right: 0.5rem;
          &:last-child{
             margin-right: 0;
          }
       }
       svg{
-         margin-right: 8px;
+         margin-right: 0.5rem;
       }
    }
 }
@@ -93,6 +93,8 @@
 }
 @media (max-width: $col-large){
    .sub-menu{
+      padding: 1.5rem 0;
+      position: static;
       &__list{
          min-width: auto;
          width: 250px;
@@ -101,8 +103,21 @@
          }
       }
       &__item{
-         line-height: 24px;
-         padding: 12px 0;
+         line-height: 1.5rem;
+         padding: 0.75rem 0;
+      }
+      .container{
+         padding: 0;
+         width: 100%;
+      }
+      &__inner{
+         display: block;
+      }
+      &__list{
+         width: 100%;
+         &_left{
+            width: 100%;
+         }
       }
    }
 }

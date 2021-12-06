@@ -2,7 +2,7 @@
    <div class="container">
       <div class="header__inner">
          <!-- левое меню -->
-         <nav class="header__menu header__col">
+         <nav class="header__menu header__col" data-submenu-item="menu">
             <ul class="header__menu-list">
                <li class="header__menu-item">
                   <button class="header__menu-btn" data-menu-item="products">
@@ -40,7 +40,7 @@
                </div>
                Меню
             </button>
-            <div class="mobile-menu sub-menu" data-submenu-item="menu">
+            <!-- <div class="mobile-menu sub-menu" data-submenu-item="menu">
                <div class="container">
                   <nav class="mobile-menu__inner">
                      <ul class="mobile-menu__list">
@@ -65,7 +65,7 @@
                      </ul>
                   </nav>
                </div>
-            </div>
+            </div> -->
          </div>
          
 
@@ -92,15 +92,17 @@
                   </div>
                </div>
             </div>
-            <button class="header__right-item header__account header__menu-item" data-menu-item="account">
-               Личный кабинет
-               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="white"/>
-               </svg>
-            </button>
-            <div class="header__authorization authorization sub-menu" data-submenu-item="account">
-               <div class="container">
-                  @@include('submenu/authorization.html')
+            <div class="authorization">
+               <button class="header__right-item header__account" data-menu-item="account">
+                  Личный кабинет
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="white"/>
+                  </svg>
+               </button>
+               <div class="header__authorization sub-menu" data-submenu-item="account">
+                  <div class="container">
+                     @@include('submenu/authorization.html')
+                  </div>
                </div>
             </div>
             <button class="header__right-item header__like">
