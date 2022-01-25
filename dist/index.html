@@ -370,100 +370,587 @@
 
 </header>
 
-      <!-- Main -->
       <main class="main">
          <section class="main-screen">
-            <div class="container main-screen__container">
-               <div class="main-screen__inner">
-                  <h1 class="h1 main-screen__h1">
-                     <span>Шиномонтаж и&nbsp;доставка бесплатно</span>
-                  </h1>
-                  <button class="button button_light main-screen__btn">Подробнее</button>
-               </div>
-            </div>
-         </section>
-
+   <div class="container main-screen__container">
+      <div class="main-screen__inner">
+         <h1 class="h1 main-screen__h1">
+            <span>Шиномонтаж и&nbsp;доставка бесплатно</span>
+         </h1>
+         <button class="button button_light main-screen__btn">Подробнее</button>
+      </div>
+   </div>
+</section>
          <section class="search-parameters">
-            <div class="container">
-               <div class="search-parameters__inner">
-                  <h3 class="search-parameters__h3">
-                     Подберём <span data-search="tires" class="search-parameters__item search-parameters__item_active">шины</span>
-                     или <span data-search="wheels" class="search-parameters__item">диски</span>
-                     по <span data-search="brands" class="search-parameters__item search-parameters__item_active">марке автомобиля</span>
-                     или <span data-search="settings" class="search-parameters__item">параметрам товара</span>
-                  </h3>
-                  <div class="search-parameters__inputs-container">
-                     <div id="select-maker"></div>
-                     <div id="select-model"></div>
-                     <div id="select-generation"></div>
-                     <div id="select-modification"></div>
-                     <div id="select-car-body"></div>
-                  </div>
-                  <a href="#" class="button button_main search-parameters__btn">Подобрать</a>
-               </div>
-            </div>
-         </section>
-
+   <div class="container">
+      <div class="search-parameters__inner">
+         <h3 class="search-parameters__h3">
+            Подберём <span data-search="tires" class="search-parameters__item search-parameters__item_active">шины</span>
+            или <span data-search="wheels" class="search-parameters__item">диски</span>
+            по <span data-search="brands" class="search-parameters__item search-parameters__item_active">марке автомобиля</span>
+            или <span data-search="settings" class="search-parameters__item">параметрам товара</span>
+         </h3>
+         <div class="search-parameters__inputs-container">
+            <div id="select-maker"></div>
+            <div id="select-model"></div>
+            <div id="select-generation"></div>
+            <div id="select-modification"></div>
+            <div id="select-car-body"></div>
+         </div>
+         <a href="#" class="button button_main search-parameters__btn">Подобрать</a>
+      </div>
+   </div>
+</section>
          <section class="popular-services">
-            <div class="container">
-               <h2 class="h2">Популярные услуги</h2>
-               <div class="popular-services__inner">
-                  <div class="popular-services__card">
-                     <div class="popular-services__picture">
-                        <img src="resources/img/services/tire_service.jpg" alt="шиномонтаж" class="popular-services__img">
-                     </div>
-                     <h3 class="popular-services__h3">Шиномонтаж</h3>
-                     <p class="popular-services__descr popular-services__time">Ежедневно с 9:00 до 21:00, без перерывов</p>
-                     <p class="popular-services__descr popular-services__price">от 500 ₽</p>
-                  </div>
-                  <div class="popular-services__card">
-                     <div class="popular-services__picture">
-                        <img src="resources/img/services/repair.jpg" alt="ремонт и правка дисков" class="popular-services__img">
-                     </div>
-                     <h3 class="popular-services__h3">Ремонт и правка дисков</h3>
-                     <p class="popular-services__descr popular-services__time">Ежедневно с 9:00 до 21:00, без перерывов</p>
-                     <p class="popular-services__descr popular-services__price">от 800 ₽</p>
-                  </div>
-                  <div class="popular-services__card">
-                     <div class="popular-services__picture">
-                        <img src="resources/img/services/tire_storage.jpg" alt="сезонное хранение шин" class="popular-services__img">
-                     </div>
-                     <h3 class="popular-services__h3">Сезонное хранение шин</h3>
-                     <p class="popular-services__descr popular-services__time">Ежедневно с 9:00 до 21:00, без перерывов</p>
-                     <p class="popular-services__descr popular-services__price">бесплатно</p>
-                  </div>
-               </div>
-               <button class="button button_light button_center">Посмотреть все услуги</button>
+   <div class="container">
+      <h2 class="h2">Популярные услуги</h2>
+      <div class="popular-services__inner">
+         <div class="info-card">
+            <div class="info-card__img">
+               <img src="resources/img/services/tire_service.jpg" alt="шиномонтаж">
+               <img class="info-card__decor" src="resources/img/info-card-decor.svg">
             </div>
-         </section>
-
+            <div class="info-card__wrapper">
+               <h3 class="info-card__title">Шиномонтаж</h3>
+               <p class="info-card__descr info-card__time">Ежедневно с 9:00 до 21:00, без перерывов</p>
+               <p class="info-card__descr info-card__price">от 500 ₽</p>
+            </div>
+         </div>
+         <div class="info-card">
+            <div class="info-card__img">
+               <img src="resources/img/services/repair.jpg" alt="ремонт и правка дисков">
+               <img class="info-card__decor" src="resources/img/info-card-decor.svg">
+            </div>
+            <div class="info-card__wrapper">
+               <h3 class="info-card__title">Ремонт и правка дисков</h3>
+               <p class="info-card__descr info-card__time">Ежедневно с 9:00 до 21:00, без перерывов</p>
+               <p class="info-card__descr info-card__price">от 800 ₽</p>
+            </div>
+         </div>
+         <div class="info-card">
+            <div class="info-card__img">
+               <img src="resources/img/services/tire_storage.jpg" alt="сезонное хранение шин">
+               <img class="info-card__decor" src="resources/img/info-card-decor.svg">
+            </div>
+            <div class="info-card__wrapper">
+               <h3 class="info-card__title">Сезонное хранение шин</h3>
+               <p class="info-card__descr info-card__time">Ежедневно с 9:00 до 21:00, без перерывов</p>
+               <p class="info-card__descr info-card__price">Бесплатно</p>
+            </div>
+         </div>
+      </div>
+      <button class="button button_light button_center">Посмотреть все услуги</button>
+   </div>
+</section>
          <section class="popular-tires">
-            <div class="container">
-               <h2 class="h2">Популярные шины</h2>
-               <div class="popular-tires__tabs-btns-inner">
-                  <button class="popular-tires__tab-btn">Автомобильные</button>
-                  <button class="popular-tires__tab-btn">Грузовые</button>
-                  <button class="popular-tires__tab-btn">Мотошины</button>
+   <div class="container">
+      <h2 class="h2">Популярные шины</h2>
+      <div class="tabs centered popular-tires__btns-inner">
+         <button class="btn-reset tabs__btn tabs__btn_active">Автомобильные</button>
+         <button class="btn-reset tabs__btn">Грузовые</button>
+         <button class="btn-reset tabs__btn">Мотошины</button>
+      </div>
+      <div class="popular-tires__products-inner">
+         <div class="product-card popular-tires__product">
+            <a href="#" class="product-card__img">
+               <img src="resources/img/products/prod1.jpg" alt="Шина">
+            </a>
+            <a href="#" class="product-card__info">
+               <div class="product-card__rating-info">
+                  <div class="review product-card__reviews">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                     </svg>
+                     <span>2</span>
+                  </div>
+                  <div class="rating product-card__rating">
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                  </div>
                </div>
-               <div class="popular-tires__tabs-inner">
-                  
+               <h3 class="product-card__title">Goodyear Vector 4Seasons</h3>
+               <div class="product-card__specif">
+                  <svg>
+                     <use xlink:href="resources/icons/sprite.svg#summer"></use>
+                  </svg>
+                  <svg>
+                     <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                  </svg>
                </div>
-               <button class="button button_light button_center">Посмотреть все шины</button>
+            </a>
+            <div class="product-card__bottom">
+               <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+               <div class="product-card__btns">
+                  <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                  <button class="btn-reset button button_light product-card__favourites">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                     </svg>
+                  </button>
+               </div>
             </div>
-         </section>
-         
+         </div>
+         <div class="product-card popular-tires__product">
+            <a href="#" class="product-card__img">
+               <img src="resources/img/products/prod1.jpg" alt="Шина">
+            </a>
+            <a href="#" class="product-card__info">
+               <div class="product-card__rating-info">
+                  <div class="review product-card__reviews">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                     </svg>
+                     <span>2</span>
+                  </div>
+                  <div class="rating product-card__rating">
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                  </div>
+               </div>
+               <h3 class="product-card__title">Goodyear Vector 4Seasons SUV <nobr>Gen-2</nobr></h3>
+               <div class="product-card__specif">
+                  <svg>
+                     <use xlink:href="resources/icons/sprite.svg#summer"></use>
+                  </svg>
+                  <svg>
+                     <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                  </svg>
+               </div>
+            </a>
+            <div class="product-card__bottom">
+               <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+               <div class="product-card__btns">
+                  <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                  <button class="btn-reset button button_light product-card__favourites">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                     </svg>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div class="product-card popular-tires__product">
+            <a href="#" class="product-card__img">
+               <img src="resources/img/products/prod1.jpg" alt="Шина">
+            </a>
+            <a href="#" class="product-card__info">
+               <div class="product-card__rating-info">
+                  <div class="review product-card__reviews">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                     </svg>
+                     <span>2</span>
+                  </div>
+                  <div class="rating product-card__rating">
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                  </div>
+               </div>
+               <h3 class="product-card__title">Cordiant Snow Cross 2</h3>
+               <div class="product-card__specif">
+                  <svg>
+                     <use xlink:href="resources/icons/sprite.svg#summer"></use>
+                  </svg>
+                  <svg>
+                     <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                  </svg>
+               </div>
+            </a>
+            <div class="product-card__bottom">
+               <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+               <div class="product-card__btns">
+                  <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                  <button class="btn-reset button button_light product-card__favourites">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                     </svg>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div class="product-card popular-tires__product">
+            <a href="#" class="product-card__img">
+               <img src="resources/img/products/prod1.jpg" alt="Шина">
+            </a>
+            <a href="#" class="product-card__info">
+               <div class="product-card__rating-info">
+                  <div class="review product-card__reviews">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                     </svg>
+                     <span>2</span>
+                  </div>
+                  <div class="rating product-card__rating">
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                  </div>
+               </div>
+               <h3 class="product-card__title">Pirelli PZero</h3>
+               <div class="product-card__specif">
+                  <svg>
+                     <use xlink:href="resources/icons/sprite.svg#summer"></use>
+                  </svg>
+                  <svg>
+                     <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                  </svg>
+               </div>
+            </a>
+            <div class="product-card__bottom">
+               <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+               <div class="product-card__btns">
+                  <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                  <button class="btn-reset button button_light product-card__favourites">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                     </svg>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <button class="button button_light button_center">Посмотреть все шины</button>
+   </div>
+</section>
+         <section class="popular-wheels">
+   <div class="container">
+      <h2 class="h2">Популярные диски</h2>
+      <div class="popular-wheels__products-inner">
+         <div class="product-card popular-wheels__product">
+            <a href="#" class="product-card__img">
+               <img src="resources/img/products/wheels/wheel1.jpg" alt="Шина">
+            </a>
+            <a href="#" class="product-card__info">
+               <div class="product-card__rating-info">
+                  <div class="review product-card__reviews">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                     </svg>
+                     <span>2</span>
+                  </div>
+                  <div class="rating product-card__rating">
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                  </div>
+               </div>
+               <h3 class="product-card__title">Колесный диск Tech Line</h3>
+               <div class="product-card__specif tags">
+                  <div class="tags__item product-card__tag">R16</div>
+                  <div class="tags__item product-card__tag">9.5/22</div>
+                  <div class="tags__item product-card__tag">5&times;112</div>
+                  <div class="tags__item product-card__tag">ET 37</div>
+                  <div class="tags__item product-card__tag">DIA 66.6</div>
+               </div>
+            </a>
+            <div class="product-card__bottom">
+               <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+               <div class="product-card__btns">
+                  <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                  <button class="btn-reset button button_light product-card__favourites">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                     </svg>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div class="product-card popular-wheels__product">
+            <a href="#" class="product-card__img">
+               <img src="resources/img/products/wheels/wheel2.jpg" alt="Шина">
+            </a>
+            <a href="#" class="product-card__info">
+               <div class="product-card__rating-info">
+                  <div class="review product-card__reviews">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                     </svg>
+                     <span>2</span>
+                  </div>
+                  <div class="rating product-card__rating">
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                  </div>
+               </div>
+               <h3 class="product-card__title">Колесный диск Tech Line</h3>
+               <div class="product-card__specif tags">
+                  <div class="tags__item product-card__tag">R16</div>
+                  <div class="tags__item product-card__tag">9.5/22</div>
+                  <div class="tags__item product-card__tag">5&times;112</div>
+                  <div class="tags__item product-card__tag">ET 37</div>
+                  <div class="tags__item product-card__tag">DIA 66.6</div>
+               </div>
+            </a>
+            <div class="product-card__bottom">
+               <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+               <div class="product-card__btns">
+                  <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                  <button class="btn-reset button button_light product-card__favourites">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                     </svg>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div class="product-card popular-wheels__product">
+            <a href="#" class="product-card__img">
+               <img src="resources/img/products/wheels/wheel3.jpg" alt="Шина">
+            </a>
+            <a href="#" class="product-card__info">
+               <div class="product-card__rating-info">
+                  <div class="review product-card__reviews">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                     </svg>
+                     <span>2</span>
+                  </div>
+                  <div class="rating product-card__rating">
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                  </div>
+               </div>
+               <h3 class="product-card__title">Колесный диск Tech Line</h3>
+               <div class="product-card__specif tags">
+                  <div class="tags__item product-card__tag">R16</div>
+                  <div class="tags__item product-card__tag">9.5/22</div>
+                  <div class="tags__item product-card__tag">5&times;112</div>
+                  <div class="tags__item product-card__tag">ET 37</div>
+                  <div class="tags__item product-card__tag">DIA 66.6</div>
+               </div>
+            </a>
+            <div class="product-card__bottom">
+               <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+               <div class="product-card__btns">
+                  <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                  <button class="btn-reset button button_light product-card__favourites">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                     </svg>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div class="product-card popular-wheels__product">
+            <a href="#" class="product-card__img">
+               <img src="resources/img/products/wheels/wheel4.jpg" alt="Шина">
+            </a>
+            <a href="#" class="product-card__info">
+               <div class="product-card__rating-info">
+                  <div class="review product-card__reviews">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                     </svg>
+                     <span>2</span>
+                  </div>
+                  <div class="rating product-card__rating">
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                     <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                  </div>
+               </div>
+               <h3 class="product-card__title">Колесный диск Tech Line</h3>
+               <div class="product-card__specif tags">
+                  <div class="tags__item product-card__tag">R16</div>
+                  <div class="tags__item product-card__tag">9.5/22</div>
+                  <div class="tags__item product-card__tag">5&times;112</div>
+                  <div class="tags__item product-card__tag">ET 37</div>
+                  <div class="tags__item product-card__tag">DIA 66.6</div>
+               </div>
+            </a>
+            <div class="product-card__bottom">
+               <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+               <div class="product-card__btns">
+                  <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                  <button class="btn-reset button button_light product-card__favourites">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                     </svg>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <button class="button button_light button_center">Посмотреть все диски</button>
+   </div>
+</section>
+         <section class="promotions">
+   <div class="container">
+      <h2 class="h2">Акции</h2>
+      <div class="promotions__inner">
+         <div class="info-card info-card_fixed promotions__info-card">
+            <div class="info-card__img">
+               <img src="resources/img/promotions/prom1.jpg" alt="шиномонтаж">
+               <img class="info-card__decor" src="resources/img/info-card-decor.svg">
+            </div>
+            <div class="info-card__wrapper">
+               <h3 class="info-card__title">Тормозные колодки со скидкой 10%</h3>
+               <div class="tags info-card__tags">
+                  <div class="tags__item info-card__tag">Диски</div>
+                  <div class="tags__item info-card__tag">Шины</div>
+               </div>
+            </div>
+            <p class="info-card__descr info-card__time">Действует до:<span>30.09.2021</span></p>
+         </div>
+         <div class="info-card info-card_fixed promotions__info-card">
+            <div class="info-card__img">
+               <img src="resources/img/promotions/prom2.jpg" alt="шиномонтаж">
+               <img class="info-card__decor" src="resources/img/info-card-decor.svg">
+            </div>
+            <div class="info-card__wrapper">
+               <h3 class="info-card__title">Скидка 10% на датчики давления при покупке дисков!</h3>
+               <div class="tags info-card__tags">
+                  <div class="tags__item info-card__tag">Диски</div>
+                  <div class="tags__item info-card__tag">Шины</div>
+               </div>
+            </div>
+            <p class="info-card__descr info-card__time">Действует до:<span>30.09.2021</span></p>
+         </div>
+         <div class="info-card info-card_fixed promotions__info-card">
+            <div class="info-card__img">
+               <img src="resources/img/promotions/prom3.jpg" alt="шиномонтаж">
+               <img class="info-card__decor" src="resources/img/info-card-decor.svg">
+            </div>
+            <div class="info-card__wrapper">
+               <h3 class="info-card__title">Покупайте новую АКБ со&nbsp;скидкой до&nbsp;1500&nbsp;рублей и&nbsp;бесплатной заменой!</h3>
+               <div class="tags info-card__tags">
+                  <div class="tags__item info-card__tag">Диски</div>
+                  <div class="tags__item info-card__tag">Шины</div>
+               </div>
+            </div>
+            <p class="info-card__descr info-card__time">Действует до:<span>30.09.2021</span></p>
+         </div>
+      </div>
+      <button class="button button_light button_center">Посмотреть все акции</button>
+   </div>
+</section>
+         <section class="about">
+   <div class="container about__container">
+      <div class="about__img">
+         <img src="resources/img/about.jpg" alt="О нас">
+      </div>
+      <div class="about__wrapper">
+         <h2 class="h2 about__title">Шинный центр 13&nbsp;&mdash; один из&nbsp;самых крупных магазинов по&nbsp;продаже шин и&nbsp;дисков в&nbsp;Саранске</h2>
+         <p class="about__descr">Если вы&nbsp;хотите правильно купить шины в&nbsp;Саранске, то&nbsp;должны знать об&nbsp;основных параметрах подбора покрышек. Главное&nbsp;&mdash; ориентироваться на&nbsp;информацию, указанную в&nbsp;маркировке.
+            <br/><br/>
+            Наша сеть&nbsp;&mdash; официальный дилер многих ведущих производителей, у&nbsp;нас вы&nbsp;можете купить шины и&nbsp;диски с&nbsp;полноценной гарантией на&nbsp;весь срок эксплуатации.
+         </p>
+         <button class="button button_light">Подробнее</button>
+      </div>
+   </div>
+</section>
       </main>
 
-
-
-      <!-- Footer -->
       <footer class="footer">
-         <div class="container">
-            footer
-         </div>
-      </footer>
+   <div class="container">
+      <nav class="footer-nav footer__nav">
+         <div class="footer-nav__col">
+            <h3 class="footer-nav__title">Товары</h3>
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Автомобильные шины</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Автомобильные диски</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Аксессуары для шин, дисков и шиномонтажа</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Аккумуляторы</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Автомасла</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Автозапчасти</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Автоэлектроника</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Автохимия и&nbsp;автокосметика</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Внешний декор, тюнинг, защита</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Инструменты и&nbsp;техническая помощь</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Компрессоры</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav__col">
+            <h3 class="footer-nav__title">Услуги</h3>
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Шиномонтаж</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Всё для шиномонтажа</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Ремонт и правка дисков</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Ошиповка зимних шин</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Сезонное хранение</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Ремонт шин</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Сход-развал</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Мелкосрочный ремонт</a></li>
+            </ul>
+          </div>
+          <div class="footer__center">
+            <a class="footer__phone" href="tel:88008888888">8 800 888-88-88</a>
+            <p class="footer__descr">Звонок бесплатный</p>
+            <button class="button button_light button_center footer__btn">Заказть обратный звонок</button>
+            <p class="footer__descr">Мы в социальных сетях</p>
+            <ul class="social footer__social">
+               <li class="social__item">
+                 <a href="#" target="_blank" class="button button_light social__link" aria-label="WhatsApp">
+                   <svg><use xlink:href="resources/icons/sprite.svg#insta"></use></svg>
+                 </a>
+               </li>
+               <li class="social__item">
+                  <a href="#" target="_blank" class="button button_light social__link" aria-label="WhatsApp">
+                    <svg><use xlink:href="resources/icons/sprite.svg#vk"></use></svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" target="_blank" class="button button_light social__link" aria-label="WhatsApp">
+                    <svg><use xlink:href="resources/icons/sprite.svg#whatsapp"></use></svg>
+                  </a>
+                </li>
+            </ul>
+            <p class="footer__descr">Создание и продвижение сайта</p>
+            <a href="#">
+               <img class="footer__sponsor" src="resources/long-cat-logo.svg" alt="long cat">
+            </a>
+          </div>
+          <div class="footer-nav__col">
+            <h3 class="footer-nav__title">Компания</h3>
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">О компании</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Оплата</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Доставка</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Статьи и новости</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Акции и скидки</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Контакты</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Кредит</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Гарантия</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Подарочные сертификаты</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Оптовым клиентам</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Возврат товара</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav__col">
+            <h3 class="footer-nav__title">Личный кабинет</h3>
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Корзина</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Баллы</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Ремонт и правка дисков</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Гараж</a></li>
+            </ul>
+          </div>
+      </nav>
    </div>
+</footer>
 
+   </div>
 
    <!-- Modals -->
 

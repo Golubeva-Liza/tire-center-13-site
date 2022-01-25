@@ -16,100 +16,19 @@
    <div class="wrapper">
       @@include('html/header.html')
 
-      <!-- Main -->
       <main class="main">
-         <section class="main-screen">
-            <div class="container main-screen__container">
-               <div class="main-screen__inner">
-                  <h1 class="h1 main-screen__h1">
-                     <span>Шиномонтаж и&nbsp;доставка бесплатно</span>
-                  </h1>
-                  <button class="button button_light main-screen__btn">Подробнее</button>
-               </div>
-            </div>
-         </section>
-
-         <section class="search-parameters">
-            <div class="container">
-               <div class="search-parameters__inner">
-                  <h3 class="search-parameters__h3">
-                     Подберём <span data-search="tires" class="search-parameters__item search-parameters__item_active">шины</span>
-                     или <span data-search="wheels" class="search-parameters__item">диски</span>
-                     по <span data-search="brands" class="search-parameters__item search-parameters__item_active">марке автомобиля</span>
-                     или <span data-search="settings" class="search-parameters__item">параметрам товара</span>
-                  </h3>
-                  <div class="search-parameters__inputs-container">
-                     <div id="select-maker"></div>
-                     <div id="select-model"></div>
-                     <div id="select-generation"></div>
-                     <div id="select-modification"></div>
-                     <div id="select-car-body"></div>
-                  </div>
-                  <a href="#" class="button button_main search-parameters__btn">Подобрать</a>
-               </div>
-            </div>
-         </section>
-
-         <section class="popular-services">
-            <div class="container">
-               <h2 class="h2">Популярные услуги</h2>
-               <div class="popular-services__inner">
-                  <div class="popular-services__card">
-                     <div class="popular-services__picture">
-                        <img src="resources/img/services/tire_service.jpg" alt="шиномонтаж" class="popular-services__img">
-                     </div>
-                     <h3 class="popular-services__h3">Шиномонтаж</h3>
-                     <p class="popular-services__descr popular-services__time">Ежедневно с 9:00 до 21:00, без перерывов</p>
-                     <p class="popular-services__descr popular-services__price">от 500 ₽</p>
-                  </div>
-                  <div class="popular-services__card">
-                     <div class="popular-services__picture">
-                        <img src="resources/img/services/repair.jpg" alt="ремонт и правка дисков" class="popular-services__img">
-                     </div>
-                     <h3 class="popular-services__h3">Ремонт и правка дисков</h3>
-                     <p class="popular-services__descr popular-services__time">Ежедневно с 9:00 до 21:00, без перерывов</p>
-                     <p class="popular-services__descr popular-services__price">от 800 ₽</p>
-                  </div>
-                  <div class="popular-services__card">
-                     <div class="popular-services__picture">
-                        <img src="resources/img/services/tire_storage.jpg" alt="сезонное хранение шин" class="popular-services__img">
-                     </div>
-                     <h3 class="popular-services__h3">Сезонное хранение шин</h3>
-                     <p class="popular-services__descr popular-services__time">Ежедневно с 9:00 до 21:00, без перерывов</p>
-                     <p class="popular-services__descr popular-services__price">бесплатно</p>
-                  </div>
-               </div>
-               <button class="button button_light button_center">Посмотреть все услуги</button>
-            </div>
-         </section>
-
-         <section class="popular-tires">
-            <div class="container">
-               <h2 class="h2">Популярные шины</h2>
-               <div class="popular-tires__tabs-btns-inner">
-                  <button class="popular-tires__tab-btn">Автомобильные</button>
-                  <button class="popular-tires__tab-btn">Грузовые</button>
-                  <button class="popular-tires__tab-btn">Мотошины</button>
-               </div>
-               <div class="popular-tires__tabs-inner">
-                  
-               </div>
-               <button class="button button_light button_center">Посмотреть все шины</button>
-            </div>
-         </section>
-         
+         @@include('html/main-page/main-screen.html')
+         @@include('html/main-page/search-parameters.html')
+         @@include('html/main-page/popular-services.html')
+         @@include('html/main-page/popular-tires.html')
+         @@include('html/main-page/popular-wheels.html')
+         @@include('html/main-page/promotions.html')
+         @@include('html/main-page/about.html')
       </main>
 
+      @@include('html/footer.html')
 
-
-      <!-- Footer -->
-      <footer class="footer">
-         <div class="container">
-            footer
-         </div>
-      </footer>
    </div>
-
 
    <!-- Modals -->
 

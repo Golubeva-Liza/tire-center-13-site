@@ -1,0 +1,7 @@
+.popular-services{
+   padding-bottom: 4rem;
+   &__inner{
+      @include grid;
+      margin-bottom: 2rem;
+   }
+}

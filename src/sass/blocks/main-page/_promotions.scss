@@ -1,0 +1,14 @@
+.promotions{
+   padding-bottom: 4rem;
+   &__inner{
+      @include grid;
+      margin-bottom: 2rem;
+   }
+   &__info-card{
+      .info-card__img{
+         img:first-child{
+            object-position: left;
+         }
+      }
+   }
+}

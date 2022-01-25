@@ -1,0 +1,26 @@
+.about{
+   padding-bottom: 4rem;
+   &__container{
+      @include grid;
+   }
+   &__img{
+      grid-column: 6 span;
+      height: 400px;
+      img{
+         @include image-div;
+      }
+   }
+   &__wrapper{
+      grid-column: 6 span;
+   }
+   &__title{
+      text-align: left;
+      margin-bottom: 1rem;
+   }
+   &__descr{
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: $color-text-grey;
+      margin-bottom: 1.5rem;
+   }
+}

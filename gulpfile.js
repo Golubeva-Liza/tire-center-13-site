@@ -9,8 +9,21 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const htmlmin = require('gulp-htmlmin');
 const fileinclude = require('gulp-file-include');
+const svgSprite = require('gulp-svg-sprite');
 
 const dist = "./dist/";
+
+ gulp.task('svgSprites', function () {
+   return gulp.src('./src/resources/icons/**.svg')
+     .pipe(svgSprite({
+       mode: {
+         stack: {
+           sprite: "../sprite.svg" //sprite file name
+         }
+       },
+     }))
+     .pipe(gulp.dest('./dist/resources/icons/'));
+ });
 
 gulp.task('html', function () {
   return gulp.src("dist/**/*.html")
@@ -90,6 +103,7 @@ gulp.task("watch", () => {
     gulp.watch(['src/html/**/*.html']).on("change", gulp.parallel("fileinclude"));
     gulp.watch(['src/*.html']).on("change", gulp.parallel("fileinclude"));
     gulp.watch("./src/js/**/*.js", gulp.parallel("build-js"));
+    gulp.watch('./src/resources/icons/**.svg', gulp.parallel("svgSprites"));
 });
 
 gulp.task("build-prod-js", () => {
@@ -120,4 +134,4 @@ gulp.task("build-prod-js", () => {
       .pipe(gulp.dest(dist));
 });
 
-gulp.task('default', gulp.parallel('watch', 'fileinclude', 'copy-resources', 'styles', "build-js"));
+gulp.task('default', gulp.parallel('watch', 'fileinclude', 'copy-resources', 'styles', "build-js", "svgSprites"));

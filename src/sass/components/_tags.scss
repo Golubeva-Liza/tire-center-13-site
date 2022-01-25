@@ -1,0 +1,16 @@
+.tags{
+   display: flex;
+   flex-wrap: wrap;
+   &__item{
+      padding: 0 4px;
+      background: #FFE9D5;
+      border-radius: 3px;
+      font-size: 10px;
+      line-height: 16px;
+      color: $color-accent;
+      margin-bottom: 0.5rem;
+      &:not(:last-child){
+         margin-right: 0.5rem;
+      }
+   }
+}

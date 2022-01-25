@@ -1,0 +1,15 @@
+.tabs{
+   &__btn{
+      padding: 0 1rem;
+      height: 3rem;
+      border-bottom: 1px solid $color-dark-grey;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: $color-light-blue;
+      &_active{
+         color: $color-accent;
+         border-bottom: 1px solid currentColor;
+      }
+   }
+}

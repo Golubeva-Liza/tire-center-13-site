@@ -68,6 +68,28 @@ p {
    margin: 0;
    margin-bottom: 2rem;
 }
+.centered{
+   display: flex;
+   justify-content: center;
+}
+.btn-reset {
+   border: none;
+   padding: 0;
+   background: transparent;
+   cursor: pointer;
+ }
+ .visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+ }
 
 
 @media (max-width: $col-extra-large){
@@ -97,18 +119,28 @@ p {
 @import 'components/input';
 @import 'components/button';
 @import 'components/select';
+@import 'components/tabs';
+@import 'components/review';
+@import 'components/rating';
+@import 'components/tags';
+@import 'components/social';
 
 
 //blocks
 @import 'blocks/header'; 
+@import 'blocks/footer';
 @import 'blocks/sub-menu';
 @import 'blocks/authorization';
 @import 'blocks/header-search';
+@import 'blocks/info-card';
+@import 'blocks/product-card';
 
 
 //sections on pages
-@import 'blocks/main/main-screen';
-@import 'blocks/main/search-parameters';
-@import 'blocks/main/popular-services';
-@import 'blocks/main/popular-tires';
-
+@import 'blocks/main-page/main-screen';
+@import 'blocks/main-page/search-parameters';
+@import 'blocks/main-page/popular-services';
+@import 'blocks/main-page/popular-tires';
+@import 'blocks/main-page/popular-wheels';
+@import 'blocks/main-page/promotions';
+@import 'blocks/main-page/about';
