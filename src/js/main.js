@@ -1,58 +1,51 @@
-import {Select} from './components/select';
+// import Swiper from './swiper-bundle.min';
+import Ellipsis from './ellipsis.min';
 import headerSelect from './components/headerSelect';
 import headerSearch from './components/headerSearch';
+import tabs from './components/tabs';
 
-
-//settings
-new Select('#select-maker', {
-   placeholder: 'Производитель',
-   data: [
-      {id: '1', value: 'пункт1'},
-      {id: '2', value: 'пункт2'},
-      {id: '3', value: 'пункт3'}
-   ]
-});
-new Select('#select-model', {
-   placeholder: 'Модель',
-   data: [
-      {id: '1', value: 'пункт1'},
-      {id: '2', value: 'пункт2'},
-      {id: '3', value: 'пункт3'}
-   ],
-   disabled: true
-});
-new Select('#select-generation', {
-   placeholder: 'Поколение',
-   data: [
-      {id: '1', value: 'пункт1'},
-      {id: '2', value: 'пункт2'},
-      {id: '3', value: 'пункт3'}
-   ],
-   disabled: true
-});
-new Select('#select-modification', {
-   placeholder: 'Модификация',
-   data: [
-      {id: '1', value: 'пункт1'},
-      {id: '2', value: 'пункт2'},
-      {id: '3', value: 'пункт3'}
-   ],
-   disabled: true
-});
-new Select('#select-car-body', {
-   placeholder: 'Кузов',
-   data: [
-      {id: '1', value: 'пункт1'},
-      {id: '2', value: 'пункт2'},
-      {id: '3', value: 'пункт3'}
-   ],
-   disabled: true
-   // selectedId: '3'
-});
+import selectSettings from './settings/selects';
 
 
 
-//functions
-headerSelect();
-headerSearch();
+
+document.addEventListener('DOMContentLoaded', () => {
+   // const swiper = new Swiper('.swiper', {
+   //    // Navigation arrows
+   //    navigation: {
+   //      nextEl: '.swiper-button-next',
+   //      prevEl: '.swiper-button-prev',
+   //    }
+   //  });
+
+   //settings
+   selectSettings();
+   Ellipsis(
+      {
+         ellipsis: '…', 
+         debounce: 0,
+         responsive: true,
+         className: '.clamp-2', 
+         lines: 2, 
+         break_word: false //!!default the ellipsis can truncate words
+       }
+   );
+   Ellipsis(
+      {
+         ellipsis: '…', 
+         debounce: 0,
+         responsive: true,
+         className: '.clamp-3', 
+         lines: 3, 
+         break_word: false //!!default the ellipsis can truncate words
+       }
+   );
+
+
+   //functions
+   headerSelect();
+   headerSearch();
+   tabs('#popular-tires-tabs');
+});
+
 

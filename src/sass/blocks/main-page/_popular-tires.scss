@@ -1,12 +1,6 @@
 .popular-tires{
    padding-bottom: 4rem;
-   &__btns-inner{
-      margin-bottom: 1.5rem;
-   }
-   &__products-inner{
-      @include grid;
-      margin-bottom: 2rem;
-   }
+   
    // &__product{
    //    grid-column: 3 span;
    // }

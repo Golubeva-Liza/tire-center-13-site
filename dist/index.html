@@ -405,39 +405,36 @@
    <div class="container">
       <h2 class="h2">Популярные услуги</h2>
       <div class="popular-services__inner">
-         <div class="info-card">
+         <a href="#" class="info-card">
             <div class="info-card__img">
                <img src="resources/img/services/tire_service.jpg" alt="шиномонтаж">
-               <img class="info-card__decor" src="resources/img/info-card-decor.svg">
             </div>
             <div class="info-card__wrapper">
                <h3 class="info-card__title">Шиномонтаж</h3>
                <p class="info-card__descr info-card__time">Ежедневно с 9:00 до 21:00, без перерывов</p>
                <p class="info-card__descr info-card__price">от 500 ₽</p>
             </div>
-         </div>
-         <div class="info-card">
+         </a>
+         <a href="#" class="info-card">
             <div class="info-card__img">
                <img src="resources/img/services/repair.jpg" alt="ремонт и правка дисков">
-               <img class="info-card__decor" src="resources/img/info-card-decor.svg">
             </div>
             <div class="info-card__wrapper">
-               <h3 class="info-card__title">Ремонт и правка дисков</h3>
+               <h3 class="info-card__title clamp-2">Ремонт и правка дисков, трансмиссии, подвески, тормозной системы</h3>
                <p class="info-card__descr info-card__time">Ежедневно с 9:00 до 21:00, без перерывов</p>
                <p class="info-card__descr info-card__price">от 800 ₽</p>
             </div>
-         </div>
-         <div class="info-card">
+         </a>
+         <a href="#" class="info-card">
             <div class="info-card__img">
                <img src="resources/img/services/tire_storage.jpg" alt="сезонное хранение шин">
-               <img class="info-card__decor" src="resources/img/info-card-decor.svg">
             </div>
             <div class="info-card__wrapper">
                <h3 class="info-card__title">Сезонное хранение шин</h3>
                <p class="info-card__descr info-card__time">Ежедневно с 9:00 до 21:00, без перерывов</p>
                <p class="info-card__descr info-card__price">Бесплатно</p>
             </div>
-         </div>
+         </a>
       </div>
       <button class="button button_light button_center">Посмотреть все услуги</button>
    </div>
@@ -445,177 +442,519 @@
          <section class="popular-tires">
    <div class="container">
       <h2 class="h2">Популярные шины</h2>
-      <div class="tabs centered popular-tires__btns-inner">
-         <button class="btn-reset tabs__btn tabs__btn_active">Автомобильные</button>
-         <button class="btn-reset tabs__btn">Грузовые</button>
-         <button class="btn-reset tabs__btn">Мотошины</button>
-      </div>
-      <div class="popular-tires__products-inner">
-         <div class="product-card popular-tires__product">
-            <a href="#" class="product-card__img">
-               <img src="resources/img/products/prod1.jpg" alt="Шина">
-            </a>
-            <a href="#" class="product-card__info">
-               <div class="product-card__rating-info">
-                  <div class="review product-card__reviews">
-                     <svg>
-                        <use xlink:href="resources/icons/sprite.svg#comment"></use>
-                     </svg>
-                     <span>2</span>
+      <div id="popular-tires-tabs" class="tabs popular-tires__tabs">
+         <ul class="tabs__list centered">
+            <li class="tabs__list-item"><button data-tabs-btn="car" class="btn-reset tabs__btn tabs__btn_active">Автомобильные</button></li>
+            <li class="tabs__list-item"><button data-tabs-btn="truck" class="btn-reset tabs__btn">Грузовые</button></li>
+            <li class="tabs__list-item"><button data-tabs-btn="motorcycle" class="btn-reset tabs__btn">Мотошины</button></li>
+         </ul>
+         <div class="tabs__content tabs__content_active" data-tabs-target="car">
+            <div class="product-card popular-tires__product">
+               <a href="#" class="product-card__img">
+                  <img src="resources/img/products/prod1.jpg" alt="Шина">
+               </a>
+               <a href="#" class="product-card__info">
+                  <div class="product-card__rating-info">
+                     <div class="review product-card__reviews">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                        </svg>
+                        <span>2</span>
+                     </div>
+                     <div class="rating product-card__rating">
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                     </div>
                   </div>
-                  <div class="rating product-card__rating">
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                  <h3 class="product-card__title">Goodyear Vector 4Seasons</h3>
+                  <div class="product-card__specif">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#summer"></use>
+                     </svg>
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                     </svg>
+                  </div>
+               </a>
+               <div class="product-card__bottom">
+                  <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+                  <div class="product-card__btns">
+                     <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                     <button class="btn-reset button button_light product-card__favourites">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        </svg>
+                     </button>
                   </div>
                </div>
-               <h3 class="product-card__title">Goodyear Vector 4Seasons</h3>
-               <div class="product-card__specif">
-                  <svg>
-                     <use xlink:href="resources/icons/sprite.svg#summer"></use>
-                  </svg>
-                  <svg>
-                     <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
-                  </svg>
-               </div>
-            </a>
-            <div class="product-card__bottom">
-               <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
-               <div class="product-card__btns">
-                  <button class="btn-reset button product-card__price">5600 &#8381;</button>
-                  <button class="btn-reset button button_light product-card__favourites">
+            </div>
+            <div class="product-card popular-tires__product">
+               <a href="#" class="product-card__img">
+                  <img src="resources/img/products/prod1.jpg" alt="Шина">
+               </a>
+               <a href="#" class="product-card__info">
+                  <div class="product-card__rating-info">
+                     <div class="review product-card__reviews">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                        </svg>
+                        <span>2</span>
+                     </div>
+                     <div class="rating product-card__rating">
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                     </div>
+                  </div>
+                  <h3 class="product-card__title">Goodyear Vector 4Seasons SUV <nobr>Gen-2</nobr></h3>
+                  <div class="product-card__specif">
                      <svg>
-                        <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        <use xlink:href="resources/icons/sprite.svg#summer"></use>
                      </svg>
-                  </button>
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                     </svg>
+                  </div>
+               </a>
+               <div class="product-card__bottom">
+                  <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+                  <div class="product-card__btns">
+                     <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                     <button class="btn-reset button button_light product-card__favourites">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-card popular-tires__product">
+               <a href="#" class="product-card__img">
+                  <img src="resources/img/products/prod1.jpg" alt="Шина">
+               </a>
+               <a href="#" class="product-card__info">
+                  <div class="product-card__rating-info">
+                     <div class="review product-card__reviews">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                        </svg>
+                        <span>2</span>
+                     </div>
+                     <div class="rating product-card__rating">
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                     </div>
+                  </div>
+                  <h3 class="product-card__title">Cordiant Snow Cross 2</h3>
+                  <div class="product-card__specif">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#summer"></use>
+                     </svg>
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                     </svg>
+                  </div>
+               </a>
+               <div class="product-card__bottom">
+                  <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+                  <div class="product-card__btns">
+                     <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                     <button class="btn-reset button button_light product-card__favourites">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-card popular-tires__product">
+               <a href="#" class="product-card__img">
+                  <img src="resources/img/products/prod1.jpg" alt="Шина">
+               </a>
+               <a href="#" class="product-card__info">
+                  <div class="product-card__rating-info">
+                     <div class="review product-card__reviews">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                        </svg>
+                        <span>2</span>
+                     </div>
+                     <div class="rating product-card__rating">
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                     </div>
+                  </div>
+                  <h3 class="product-card__title">Pirelli PZero</h3>
+                  <div class="product-card__specif">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#summer"></use>
+                     </svg>
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                     </svg>
+                  </div>
+               </a>
+               <div class="product-card__bottom">
+                  <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+                  <div class="product-card__btns">
+                     <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                     <button class="btn-reset button button_light product-card__favourites">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        </svg>
+                     </button>
+                  </div>
                </div>
             </div>
          </div>
-         <div class="product-card popular-tires__product">
-            <a href="#" class="product-card__img">
-               <img src="resources/img/products/prod1.jpg" alt="Шина">
-            </a>
-            <a href="#" class="product-card__info">
-               <div class="product-card__rating-info">
-                  <div class="review product-card__reviews">
-                     <svg>
-                        <use xlink:href="resources/icons/sprite.svg#comment"></use>
-                     </svg>
-                     <span>2</span>
+         <div class="tabs__content" data-tabs-target="truck">
+            <div class="product-card popular-tires__product">
+               <a href="#" class="product-card__img">
+                  <img src="resources/img/products/prod2.jpg" alt="Шина">
+               </a>
+               <a href="#" class="product-card__info">
+                  <div class="product-card__rating-info">
+                     <div class="review product-card__reviews">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                        </svg>
+                        <span>2</span>
+                     </div>
+                     <div class="rating product-card__rating">
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                     </div>
                   </div>
-                  <div class="rating product-card__rating">
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                  <h3 class="product-card__title">315/80R22,5 Hifly HH302</h3>
+                  <div class="product-card__specif">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#summer"></use>
+                     </svg>
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                     </svg>
+                  </div>
+               </a>
+               <div class="product-card__bottom">
+                  <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+                  <div class="product-card__btns">
+                     <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                     <button class="btn-reset button button_light product-card__favourites">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        </svg>
+                     </button>
                   </div>
                </div>
-               <h3 class="product-card__title">Goodyear Vector 4Seasons SUV <nobr>Gen-2</nobr></h3>
-               <div class="product-card__specif">
-                  <svg>
-                     <use xlink:href="resources/icons/sprite.svg#summer"></use>
-                  </svg>
-                  <svg>
-                     <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
-                  </svg>
-               </div>
-            </a>
-            <div class="product-card__bottom">
-               <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
-               <div class="product-card__btns">
-                  <button class="btn-reset button product-card__price">5600 &#8381;</button>
-                  <button class="btn-reset button button_light product-card__favourites">
+            </div>
+            <div class="product-card popular-tires__product">
+               <a href="#" class="product-card__img">
+                  <img src="resources/img/products/prod2.jpg" alt="Шина">
+               </a>
+               <a href="#" class="product-card__info">
+                  <div class="product-card__rating-info">
+                     <div class="review product-card__reviews">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                        </svg>
+                        <span>2</span>
+                     </div>
+                     <div class="rating product-card__rating">
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                     </div>
+                  </div>
+                  <h3 class="product-card__title">АШК Forward Traction-1260 425/85R21</h3>
+                  <div class="product-card__specif">
                      <svg>
-                        <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        <use xlink:href="resources/icons/sprite.svg#summer"></use>
                      </svg>
-                  </button>
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                     </svg>
+                  </div>
+               </a>
+               <div class="product-card__bottom">
+                  <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+                  <div class="product-card__btns">
+                     <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                     <button class="btn-reset button button_light product-card__favourites">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-card popular-tires__product">
+               <a href="#" class="product-card__img">
+                  <img src="resources/img/products/prod2.jpg" alt="Шина">
+               </a>
+               <a href="#" class="product-card__info">
+                  <div class="product-card__rating-info">
+                     <div class="review product-card__reviews">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                        </svg>
+                        <span>2</span>
+                     </div>
+                     <div class="rating product-card__rating">
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                     </div>
+                  </div>
+                  <h3 class="product-card__title">Hankook TL10+ 435/50R19,5 160/156J</h3>
+                  <div class="product-card__specif">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#summer"></use>
+                     </svg>
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                     </svg>
+                  </div>
+               </a>
+               <div class="product-card__bottom">
+                  <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+                  <div class="product-card__btns">
+                     <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                     <button class="btn-reset button button_light product-card__favourites">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-card popular-tires__product">
+               <a href="#" class="product-card__img">
+                  <img src="resources/img/products/prod2.jpg" alt="Шина">
+               </a>
+               <a href="#" class="product-card__info">
+                  <div class="product-card__rating-info">
+                     <div class="review product-card__reviews">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                        </svg>
+                        <span>2</span>
+                     </div>
+                     <div class="rating product-card__rating">
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                     </div>
+                  </div>
+                  <h3 class="product-card__title">Pirelli TR01T 315/70R22,5</h3>
+                  <div class="product-card__specif">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#summer"></use>
+                     </svg>
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                     </svg>
+                  </div>
+               </a>
+               <div class="product-card__bottom">
+                  <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+                  <div class="product-card__btns">
+                     <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                     <button class="btn-reset button button_light product-card__favourites">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        </svg>
+                     </button>
+                  </div>
                </div>
             </div>
          </div>
-         <div class="product-card popular-tires__product">
-            <a href="#" class="product-card__img">
-               <img src="resources/img/products/prod1.jpg" alt="Шина">
-            </a>
-            <a href="#" class="product-card__info">
-               <div class="product-card__rating-info">
-                  <div class="review product-card__reviews">
-                     <svg>
-                        <use xlink:href="resources/icons/sprite.svg#comment"></use>
-                     </svg>
-                     <span>2</span>
+         <div class="tabs__content" data-tabs-target="motorcycle">
+            <div class="product-card popular-tires__product">
+               <a href="#" class="product-card__img">
+                  <img src="resources/img/products/prod3.jpg" alt="Шина">
+               </a>
+               <a href="#" class="product-card__info">
+                  <div class="product-card__rating-info">
+                     <div class="review product-card__reviews">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                        </svg>
+                        <span>2</span>
+                     </div>
+                     <div class="rating product-card__rating">
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                     </div>
                   </div>
-                  <div class="rating product-card__rating">
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
-                  </div>
-               </div>
-               <h3 class="product-card__title">Cordiant Snow Cross 2</h3>
-               <div class="product-card__specif">
-                  <svg>
-                     <use xlink:href="resources/icons/sprite.svg#summer"></use>
-                  </svg>
-                  <svg>
-                     <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
-                  </svg>
-               </div>
-            </a>
-            <div class="product-card__bottom">
-               <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
-               <div class="product-card__btns">
-                  <button class="btn-reset button product-card__price">5600 &#8381;</button>
-                  <button class="btn-reset button button_light product-card__favourites">
+                  <h3 class="product-card__title">Pirelli Sport Demon(Задняя) 130/90 R17 68V</h3>
+                  <div class="product-card__specif">
                      <svg>
-                        <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        <use xlink:href="resources/icons/sprite.svg#summer"></use>
                      </svg>
-                  </button>
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                     </svg>
+                  </div>
+               </a>
+               <div class="product-card__bottom">
+                  <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+                  <div class="product-card__btns">
+                     <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                     <button class="btn-reset button button_light product-card__favourites">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        </svg>
+                     </button>
+                  </div>
                </div>
             </div>
-         </div>
-         <div class="product-card popular-tires__product">
-            <a href="#" class="product-card__img">
-               <img src="resources/img/products/prod1.jpg" alt="Шина">
-            </a>
-            <a href="#" class="product-card__info">
-               <div class="product-card__rating-info">
-                  <div class="review product-card__reviews">
-                     <svg>
-                        <use xlink:href="resources/icons/sprite.svg#comment"></use>
-                     </svg>
-                     <span>2</span>
+            <div class="product-card popular-tires__product">
+               <a href="#" class="product-card__img">
+                  <img src="resources/img/products/prod3.jpg" alt="Шина">
+               </a>
+               <a href="#" class="product-card__info">
+                  <div class="product-card__rating-info">
+                     <div class="review product-card__reviews">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                        </svg>
+                        <span>2</span>
+                     </div>
+                     <div class="rating product-card__rating">
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                     </div>
                   </div>
-                  <div class="rating product-card__rating">
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
-                     <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                  <h3 class="product-card__title">Metzeler Roadtec 01</h3>
+                  <div class="product-card__specif">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#summer"></use>
+                     </svg>
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                     </svg>
+                  </div>
+               </a>
+               <div class="product-card__bottom">
+                  <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+                  <div class="product-card__btns">
+                     <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                     <button class="btn-reset button button_light product-card__favourites">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        </svg>
+                     </button>
                   </div>
                </div>
-               <h3 class="product-card__title">Pirelli PZero</h3>
-               <div class="product-card__specif">
-                  <svg>
-                     <use xlink:href="resources/icons/sprite.svg#summer"></use>
-                  </svg>
-                  <svg>
-                     <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
-                  </svg>
-               </div>
-            </a>
-            <div class="product-card__bottom">
-               <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
-               <div class="product-card__btns">
-                  <button class="btn-reset button product-card__price">5600 &#8381;</button>
-                  <button class="btn-reset button button_light product-card__favourites">
+            </div>
+            <div class="product-card popular-tires__product">
+               <a href="#" class="product-card__img">
+                  <img src="resources/img/products/prod3.jpg" alt="Шина">
+               </a>
+               <a href="#" class="product-card__info">
+                  <div class="product-card__rating-info">
+                     <div class="review product-card__reviews">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                        </svg>
+                        <span>2</span>
+                     </div>
+                     <div class="rating product-card__rating">
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                     </div>
+                  </div>
+                  <h3 class="product-card__title">Michelin City Grip 120/70 -11 56L TL </h3>
+                  <div class="product-card__specif">
                      <svg>
-                        <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        <use xlink:href="resources/icons/sprite.svg#summer"></use>
                      </svg>
-                  </button>
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                     </svg>
+                  </div>
+               </a>
+               <div class="product-card__bottom">
+                  <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+                  <div class="product-card__btns">
+                     <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                     <button class="btn-reset button button_light product-card__favourites">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-card popular-tires__product">
+               <a href="#" class="product-card__img">
+                  <img src="resources/img/products/prod3.jpg" alt="Шина">
+               </a>
+               <a href="#" class="product-card__info">
+                  <div class="product-card__rating-info">
+                     <div class="review product-card__reviews">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#comment"></use>
+                        </svg>
+                        <span>2</span>
+                     </div>
+                     <div class="rating product-card__rating">
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-full"></use></svg>
+                        <svg><use xlink:href="resources/icons/sprite.svg#rating-half"></use></svg>
+                     </div>
+                  </div>
+                  <h3 class="product-card__title">Michelin Starcross 5 MEDIUM(Задняя) 100/100 R18 59M</h3>
+                  <div class="product-card__specif">
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#summer"></use>
+                     </svg>
+                     <svg>
+                        <use xlink:href="resources/icons/sprite.svg#guarantee"></use>
+                     </svg>
+                  </div>
+               </a>
+               <div class="product-card__bottom">
+                  <span class="product-card__quantity">В наличии: <span>14</span> шт.</span>
+                  <div class="product-card__btns">
+                     <button class="btn-reset button product-card__price">5600 &#8381;</button>
+                     <button class="btn-reset button button_light product-card__favourites">
+                        <svg>
+                           <use xlink:href="resources/icons/sprite.svg#favourites"></use>
+                        </svg>
+                     </button>
+                  </div>
                </div>
             </div>
          </div>
@@ -799,48 +1138,45 @@
    <div class="container">
       <h2 class="h2">Акции</h2>
       <div class="promotions__inner">
-         <div class="info-card info-card_fixed promotions__info-card">
+         <a href="#" class="info-card info-card_fixed promotions__info-card">
             <div class="info-card__img">
                <img src="resources/img/promotions/prom1.jpg" alt="шиномонтаж">
-               <img class="info-card__decor" src="resources/img/info-card-decor.svg">
             </div>
             <div class="info-card__wrapper">
-               <h3 class="info-card__title">Тормозные колодки со скидкой 10%</h3>
+               <h3 class="info-card__title clamp-3">Тормозные колодки со скидкой 10%</h3>
                <div class="tags info-card__tags">
                   <div class="tags__item info-card__tag">Диски</div>
                   <div class="tags__item info-card__tag">Шины</div>
                </div>
             </div>
             <p class="info-card__descr info-card__time">Действует до:<span>30.09.2021</span></p>
-         </div>
-         <div class="info-card info-card_fixed promotions__info-card">
+         </a>
+         <a href="#" class="info-card info-card_fixed promotions__info-card">
             <div class="info-card__img">
                <img src="resources/img/promotions/prom2.jpg" alt="шиномонтаж">
-               <img class="info-card__decor" src="resources/img/info-card-decor.svg">
             </div>
             <div class="info-card__wrapper">
-               <h3 class="info-card__title">Скидка 10% на датчики давления при покупке дисков!</h3>
+               <h3 class="info-card__title clamp-3">Скидка 10% на датчики давления при покупке дисков!</h3>
                <div class="tags info-card__tags">
                   <div class="tags__item info-card__tag">Диски</div>
                   <div class="tags__item info-card__tag">Шины</div>
                </div>
             </div>
             <p class="info-card__descr info-card__time">Действует до:<span>30.09.2021</span></p>
-         </div>
-         <div class="info-card info-card_fixed promotions__info-card">
+         </a>
+         <a href="#" class="info-card info-card_fixed promotions__info-card">
             <div class="info-card__img">
                <img src="resources/img/promotions/prom3.jpg" alt="шиномонтаж">
-               <img class="info-card__decor" src="resources/img/info-card-decor.svg">
             </div>
             <div class="info-card__wrapper">
-               <h3 class="info-card__title">Покупайте новую АКБ со&nbsp;скидкой до&nbsp;1500&nbsp;рублей и&nbsp;бесплатной заменой!</h3>
+               <h3 class="info-card__title clamp-3">Покупайте новую АКБ со&nbsp;скидкой до&nbsp;1500&nbsp;рублей и&nbsp;бесплатной заменой!</h3>
                <div class="tags info-card__tags">
                   <div class="tags__item info-card__tag">Диски</div>
                   <div class="tags__item info-card__tag">Шины</div>
                </div>
             </div>
             <p class="info-card__descr info-card__time">Действует до:<span>30.09.2021</span></p>
-         </div>
+         </a>
       </div>
       <button class="button button_light button_center">Посмотреть все акции</button>
    </div>

@@ -7,9 +7,29 @@
       font-size: 1rem;
       line-height: 1.5rem;
       color: $color-light-blue;
+      transition: background-color .3s;
       &_active{
          color: $color-accent;
          border-bottom: 1px solid currentColor;
+      }
+      &:hover{
+         background-color: #FFE9D5;
+      }
+      &:focus{
+         // background-color: #FFE9D5;
+         outline: 0;
+      }
+   }
+   &__list{
+      margin-bottom: 1.5rem;
+   }
+   &__content{
+      @include grid;
+      margin-bottom: 2rem;
+      display: none;
+      min-width: 0;
+      &_active{
+         display: grid;
       }
    }
 }
