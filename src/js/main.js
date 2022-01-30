@@ -1,8 +1,8 @@
-// import Swiper from './swiper-bundle.min';
 import Ellipsis from './ellipsis.min';
 import headerSelect from './components/headerSelect';
 import headerSearch from './components/headerSearch';
 import tabs from './components/tabs';
+import mainSlider from './components/mainSlider';
 
 import selectSettings from './settings/selects';
 
@@ -10,13 +10,6 @@ import selectSettings from './settings/selects';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-   // const swiper = new Swiper('.swiper', {
-   //    // Navigation arrows
-   //    navigation: {
-   //      nextEl: '.swiper-button-next',
-   //      prevEl: '.swiper-button-prev',
-   //    }
-   //  });
 
    //settings
    selectSettings();
@@ -33,13 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
    Ellipsis(
       {
          ellipsis: '…', 
-         debounce: 0,
+         // debounce: 0,
          responsive: true,
          className: '.clamp-3', 
          lines: 3, 
          break_word: false //!!default the ellipsis can truncate words
        }
    );
+   mainSlider();
 
 
    //functions

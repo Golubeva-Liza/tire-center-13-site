@@ -1,7 +1,14 @@
 .popular-tires{
    padding-bottom: 4rem;
-   
-   // &__product{
-   //    grid-column: 3 span;
-   // }
 }
+
+// @media (max-width: $col-large){
+//    .popular-tires{
+//       &__product{
+//          grid-column: 4 span;
+//          &:last-child{
+//             display: none;
+//          }
+//       }
+//    }
+// }

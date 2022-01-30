@@ -1,8 +1,10 @@
 .promotions{
    padding-bottom: 4rem;
    &__inner{
-      @include grid;
+      // @include grid;
+      display: flex;
       margin-bottom: 2rem;
+      min-width: 0;
    }
    &__info-card{
       .info-card__img{

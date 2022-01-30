@@ -1,0 +1,39 @@
+.main-slider{
+   padding-bottom: 2.5rem;
+   &_small{
+      &::before{
+         content: '';
+         position: absolute;
+         left: 0;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         background: linear-gradient(-90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%);
+         z-index: 10;
+         pointer-events: none;
+      }
+   }
+   .info-card{
+      margin: 0 auto;
+   }
+   .swiper-pagination{
+      bottom: 0;
+   }
+   .swiper-pagination-bullet{
+      opacity: 1;
+      width: 12px;
+      height: 12px;
+      margin: 0 0.5rem !important;
+      background-color: $color-light-blue;
+      &:hover{
+         background-color: $color-blue-focus;
+      }
+   }
+   .swiper-pagination-bullet-active{
+      // outline: 1px solid #FFFFFF;
+      background-color: $color-accent;
+      &:hover{
+         background-color: $color-accent;
+      }
+   }
+}

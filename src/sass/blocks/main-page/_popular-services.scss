@@ -1,8 +1,9 @@
 .popular-services{
    padding-bottom: 4rem;
    &__inner{
-      @include grid;
+      display: flex;
       margin-bottom: 2rem;
+      min-width: 0;
    }
 }
 
