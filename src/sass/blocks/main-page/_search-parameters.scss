@@ -1,6 +1,5 @@
 .search-parameters{
-   padding-top: 1.5rem;
-   padding-bottom: 4rem;
+   padding: 2rem 0;
    &__inner{
       display: flex;
       flex-direction: column;
@@ -35,6 +34,24 @@
       }
       .select{
          margin-top: 1rem;
+      }
+   }
+}
+
+
+@media (max-width: $col-small){
+   .search-parameters{
+      &__inner{
+         display: block;
+      }
+      &__inputs-container{
+         display: block;
+      }
+      .select{
+         width: 100%;
+      }
+      &__btn{
+         margin: 0 auto;
       }
    }
 }

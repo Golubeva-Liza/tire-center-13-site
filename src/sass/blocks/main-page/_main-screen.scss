@@ -8,6 +8,7 @@
    &__container{
       display: flex;
       justify-content: flex-end;
+      position: relative;
    }
    &__inner{
       padding-top: 5rem;
@@ -40,8 +41,26 @@
 }
 @media (max-width: $col-medium){//table version
    .main-screen{
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../resources/img/main-bg-small.jpg');
+      background-color: $color-black;
+      background-size: cover;
+      // background-position: center top -60px;
+      &__container{
+         height: 100%;
+      }
+      &__inner{
+         position: absolute;
+         bottom: 2rem;
+         left: 0;
+         padding: 0 15px;
+      }
    }
 }
-@media (max-width: $col-small){
-
+@media (max-width: $col-extra-small){
+   .main-screen{
+      &__h1{
+         font-size: 28px;
+         line-height: 36px;
+      }
+   }
 }

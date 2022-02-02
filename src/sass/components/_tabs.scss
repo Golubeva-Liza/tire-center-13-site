@@ -33,3 +33,14 @@
       }
    }
 }
+
+
+@media (max-width: $col-extra-small){
+   .tabs{
+      &__content{
+         &_active{
+            display: block;
+         }
+      }
+   }
+}

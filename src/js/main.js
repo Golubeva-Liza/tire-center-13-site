@@ -1,5 +1,5 @@
 import Ellipsis from './ellipsis.min';
-import headerSelect from './components/headerSelect';
+import nestedMenu from './components/nestedMenu';
 import headerSearch from './components/headerSearch';
 import tabs from './components/tabs';
 import mainSlider from './components/mainSlider';
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
    Ellipsis(
       {
          ellipsis: '…', 
-         // debounce: 0,
+         debounce: 0,
          responsive: true,
          className: '.clamp-3', 
          lines: 3, 
@@ -37,7 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
    //functions
-   headerSelect();
+   nestedMenu('.header');
+   nestedMenu('.footer');
    headerSearch();
    tabs('#popular-tires-tabs');
 });

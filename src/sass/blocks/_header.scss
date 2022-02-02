@@ -112,6 +112,7 @@
    &__right{
       display: flex;
       justify-content: end;
+      align-items: center;
    }
    &__right-item{
       background-color: transparent;
@@ -236,5 +237,10 @@
    }
 }
 @media (max-width: $col-small){
-
+   .header{
+      &__right-item{
+         min-width: 3rem;
+         height: 3rem;
+      }
+   }
 }

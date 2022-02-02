@@ -1,14 +1,14 @@
-function headerSelect(){
-   const header = document.querySelector('.header');
-   const menuBtns= header.querySelectorAll('[data-menu-item]');
-   const submenu= header.querySelectorAll('[data-submenu-item]');
+function nestedMenu(selector){
+   const section = document.querySelector(selector);
+   const menuBtns= section.querySelectorAll('[data-menu-item]');
+   const submenu= section.querySelectorAll('[data-submenu-item]');
 
    menuBtns.forEach(item => {
       item.addEventListener('click', () => {
          const currentMenuName = item.getAttribute('data-menu-item');
-         const currentDrop = header.querySelector(`[data-submenu-item = "${currentMenuName}"]`);
+         const currentDrop = section.querySelector(`[data-submenu-item = "${currentMenuName}"]`);
 
-         if (!header.querySelector('[data-menu-item="menu"]').classList.contains('active')){
+         if (!section.querySelector('[data-menu-item="menu"]') || !section.querySelector('[data-menu-item="menu"]').classList.contains('active')){
             menuBtns.forEach(el => {
                if (el !== item){
                   el.classList.remove('active');
@@ -30,7 +30,7 @@ function headerSelect(){
    })
 
    function closeSubMenu (e){
-      if (!e.target.closest('.header__menu') && !e.target.closest('.header__mobile-btn') && !e.target.closest('.authorization')){
+      if (!e.target.closest('.header__menu') && !e.target.closest('.header__mobile-btn') && !e.target.closest('.authorization') && !e.target.closest('.footer')){
          // console.log('закрыть');
          menuBtns.forEach(el => {
             el.classList.remove('active');
@@ -39,10 +39,9 @@ function headerSelect(){
          submenu.forEach(el => {
             el.classList.remove('sub-menu_active');
          });
-         
 
          document.removeEventListener('click', closeSubMenu);
       }
    }
 }
-export default headerSelect;
+export default nestedMenu;

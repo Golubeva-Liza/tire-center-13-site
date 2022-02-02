@@ -49,6 +49,12 @@
       margin-top: -6px;
       margin-bottom: 1rem;
       position: relative;
+
+      //иногда просто не работает
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
    }
    &__wrapper{
       padding: 0 2rem;
@@ -127,9 +133,17 @@
       }
    }
 }
-@media (max-width: $col-medium){
-
-}
 @media (max-width: $col-small){
-
+   .info-card{
+      padding-bottom: 1.5rem;
+      &__title{
+         font-size: 20px;
+         line-height: 28px;
+      }
+   }
+}
+@media (max-width: $col-extra-small){
+   .info-card{
+      width: auto;
+   }
 }

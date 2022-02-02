@@ -110,7 +110,12 @@ p {
    }
 }
 @media (max-width: $col-small){
-
+   .container{
+      width: auto;
+   }
+   .h2{
+      margin-bottom: 1rem;
+   }
 }
 
 

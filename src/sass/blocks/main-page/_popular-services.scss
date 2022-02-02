@@ -1,5 +1,5 @@
 .popular-services{
-   padding-bottom: 4rem;
+   padding: 2rem 0;
    &__inner{
       display: flex;
       margin-bottom: 2rem;
@@ -14,8 +14,5 @@
 
 }
 @media (max-width: $col-medium){//table version
-
-}
-@media (max-width: $col-small){
 
 }

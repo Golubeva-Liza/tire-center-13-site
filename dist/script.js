@@ -21,60 +21,6 @@ function headerSelect() {
 
 /***/ }),
 
-/***/ "./src/js/components/headerSelect.js":
-/*!*******************************************!*\
-  !*** ./src/js/components/headerSelect.js ***!
-  \*******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-function headerSelect() {
-  const header = document.querySelector('.header');
-  const menuBtns = header.querySelectorAll('[data-menu-item]');
-  const submenu = header.querySelectorAll('[data-submenu-item]');
-  menuBtns.forEach(item => {
-    item.addEventListener('click', () => {
-      const currentMenuName = item.getAttribute('data-menu-item');
-      const currentDrop = header.querySelector(`[data-submenu-item = "${currentMenuName}"]`);
-
-      if (!header.querySelector('[data-menu-item="menu"]').classList.contains('active')) {
-        menuBtns.forEach(el => {
-          if (el !== item) {
-            el.classList.remove('active');
-          }
-        });
-        submenu.forEach(el => {
-          if (el !== currentDrop) {
-            el.classList.remove('sub-menu_active');
-          }
-        });
-      }
-
-      currentDrop.classList.toggle('sub-menu_active');
-      item.classList.toggle('active');
-      document.addEventListener('click', closeSubMenu);
-    });
-  });
-
-  function closeSubMenu(e) {
-    if (!e.target.closest('.header__menu') && !e.target.closest('.header__mobile-btn') && !e.target.closest('.authorization')) {
-      // console.log('закрыть');
-      menuBtns.forEach(el => {
-        el.classList.remove('active');
-      });
-      submenu.forEach(el => {
-        el.classList.remove('sub-menu_active');
-      });
-      document.removeEventListener('click', closeSubMenu);
-    }
-  }
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (headerSelect);
-
-/***/ }),
-
 /***/ "./src/js/components/mainSlider.js":
 /*!*****************************************!*\
   !*** ./src/js/components/mainSlider.js ***!
@@ -115,7 +61,6 @@ function mainSlider() {
   let isActive = true;
 
   function swiperInit() {
-    console.log(swiper);
     const initNeeded = window.innerWidth < 992;
 
     if (initNeeded && !isActive) {
@@ -139,6 +84,60 @@ function mainSlider() {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (mainSlider);
+
+/***/ }),
+
+/***/ "./src/js/components/nestedMenu.js":
+/*!*****************************************!*\
+  !*** ./src/js/components/nestedMenu.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function nestedMenu(selector) {
+  const section = document.querySelector(selector);
+  const menuBtns = section.querySelectorAll('[data-menu-item]');
+  const submenu = section.querySelectorAll('[data-submenu-item]');
+  menuBtns.forEach(item => {
+    item.addEventListener('click', () => {
+      const currentMenuName = item.getAttribute('data-menu-item');
+      const currentDrop = section.querySelector(`[data-submenu-item = "${currentMenuName}"]`);
+
+      if (!section.querySelector('[data-menu-item="menu"]') || !section.querySelector('[data-menu-item="menu"]').classList.contains('active')) {
+        menuBtns.forEach(el => {
+          if (el !== item) {
+            el.classList.remove('active');
+          }
+        });
+        submenu.forEach(el => {
+          if (el !== currentDrop) {
+            el.classList.remove('sub-menu_active');
+          }
+        });
+      }
+
+      currentDrop.classList.toggle('sub-menu_active');
+      item.classList.toggle('active');
+      document.addEventListener('click', closeSubMenu);
+    });
+  });
+
+  function closeSubMenu(e) {
+    if (!e.target.closest('.header__menu') && !e.target.closest('.header__mobile-btn') && !e.target.closest('.authorization') && !e.target.closest('.footer')) {
+      // console.log('закрыть');
+      menuBtns.forEach(el => {
+        el.classList.remove('active');
+      });
+      submenu.forEach(el => {
+        el.classList.remove('sub-menu_active');
+      });
+      document.removeEventListener('click', closeSubMenu);
+    }
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (nestedMenu);
 
 /***/ }),
 
@@ -5942,7 +5941,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ellipsis_min__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ellipsis.min */ "./src/js/ellipsis.min.js");
 /* harmony import */ var _ellipsis_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ellipsis_min__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_headerSelect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/headerSelect */ "./src/js/components/headerSelect.js");
+/* harmony import */ var _components_nestedMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/nestedMenu */ "./src/js/components/nestedMenu.js");
 /* harmony import */ var _components_headerSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/headerSearch */ "./src/js/components/headerSearch.js");
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
 /* harmony import */ var _components_mainSlider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/mainSlider */ "./src/js/components/mainSlider.js");
@@ -5967,7 +5966,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   _ellipsis_min__WEBPACK_IMPORTED_MODULE_0___default()({
     ellipsis: '…',
-    // debounce: 0,
+    debounce: 0,
     responsive: true,
     className: '.clamp-3',
     lines: 3,
@@ -5976,7 +5975,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   (0,_components_mainSlider__WEBPACK_IMPORTED_MODULE_4__["default"])(); //functions
 
-  (0,_components_headerSelect__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_components_nestedMenu__WEBPACK_IMPORTED_MODULE_1__["default"])('.header');
+  (0,_components_nestedMenu__WEBPACK_IMPORTED_MODULE_1__["default"])('.footer');
   (0,_components_headerSearch__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_components_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])('#popular-tires-tabs');
 });

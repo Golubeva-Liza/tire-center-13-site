@@ -1,10 +1,18 @@
 .popular-wheels{
-   padding-bottom: 4rem;
+   padding: 2rem 0;
    &__btns-inner{
       margin-bottom: 1.5rem;
    }
    &__products-inner{
       @include grid;
       margin-bottom: 2rem;
+   }
+}
+
+@media (max-width: $col-extra-small){
+   .popular-wheels{
+      &__products-inner{
+         display: block;
+      }
    }
 }

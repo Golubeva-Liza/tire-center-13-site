@@ -1,4 +1,5 @@
 .about{
+   padding-top: 2rem;
    padding-bottom: 4rem;
    &__container{
       @include grid;
@@ -23,4 +24,40 @@
       color: $color-text-grey;
       margin-bottom: 1.5rem;
    }
+}
+
+@media (max-width: $col-extra-large){
+   .about{
+      &__img{
+         img{
+            object-position: left;
+         }
+         &__title{
+            text-align: left;
+            margin-bottom: 1rem;
+         }
+      }
+   }
+}
+@media (max-width: $col-large){
+   .about{
+      &__img{
+         grid-column: 12 span;
+         height: auto;
+      }
+      &__wrapper{
+         grid-column: 12 span;
+      }
+   }
+}
+@media (max-width: $col-medium){
+   .about{
+      &__title{
+         font-size: 1.5rem;
+         line-height: 2rem;
+      }
+   }
+}
+@media (max-width: $col-small){
+
 }

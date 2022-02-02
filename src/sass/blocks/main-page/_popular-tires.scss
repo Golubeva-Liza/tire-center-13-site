@@ -1,14 +1,13 @@
 .popular-tires{
-   padding-bottom: 4rem;
+   padding: 2rem 0;
 }
 
-// @media (max-width: $col-large){
-//    .popular-tires{
-//       &__product{
-//          grid-column: 4 span;
-//          &:last-child{
-//             display: none;
-//          }
-//       }
-//    }
-// }
+@media (max-width: $col-medium){
+   .popular-tires{
+      .tabs__list{
+         justify-content: flex-start;
+         width: 100%;
+         overflow-x: auto;
+      }
+   }
+}
