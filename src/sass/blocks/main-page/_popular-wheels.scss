@@ -9,6 +9,12 @@
    }
 }
 
+
+@media (max-width: $col-small){
+   .popular-wheels{
+      padding: 1.5rem 0;
+   }
+}
 @media (max-width: $col-extra-small){
    .popular-wheels{
       &__products-inner{

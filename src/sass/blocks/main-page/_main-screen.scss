@@ -4,7 +4,6 @@
    background-size: cover;
    background-position: center;
    height: 450px;
-   
    &__container{
       display: flex;
       justify-content: flex-end;
@@ -23,6 +22,7 @@
       font-size: 1rem;
    }
 }
+
 
 @media (max-width: $col-extra-large){
    .main-screen{
@@ -58,6 +58,7 @@
 }
 @media (max-width: $col-extra-small){
    .main-screen{
+      height: 410px;
       &__h1{
          font-size: 28px;
          line-height: 36px;

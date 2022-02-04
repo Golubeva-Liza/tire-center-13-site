@@ -1,5 +1,4 @@
 .main-slider{
-   padding-bottom: 2.5rem;
    &_small{
       &::before{
          content: '';
@@ -37,3 +36,11 @@
       }
    }
 }
+
+
+@media (max-width: $col-large){
+   .main-slider{
+      padding-bottom: 2.5rem;
+   }
+}
+ 

@@ -102,9 +102,9 @@ function nestedMenu(selector) {
   menuBtns.forEach(item => {
     item.addEventListener('click', () => {
       const currentMenuName = item.getAttribute('data-menu-item');
-      const currentDrop = section.querySelector(`[data-submenu-item = "${currentMenuName}"]`);
+      const currentDrop = section.querySelector(`[data-submenu-item = "${currentMenuName}"]`); // if (!section.querySelector('[data-menu-item="menu"]') || !section.querySelector('[data-menu-item="menu"]').classList.contains('active')){
 
-      if (!section.querySelector('[data-menu-item="menu"]') || !section.querySelector('[data-menu-item="menu"]').classList.contains('active')) {
+      if (!item.closest('[data-submenu-item="menu"]') || !section.querySelector('[data-menu-item="menu"]').classList.contains('active')) {
         menuBtns.forEach(el => {
           if (el !== item) {
             el.classList.remove('active');
@@ -124,7 +124,7 @@ function nestedMenu(selector) {
   });
 
   function closeSubMenu(e) {
-    if (!e.target.closest('.header__menu') && !e.target.closest('.header__mobile-btn') && !e.target.closest('.authorization') && !e.target.closest('.footer')) {
+    if (!e.target.closest('.header-menu') && !e.target.closest('.header-mobile__menu') && !e.target.closest('.authorization') && !e.target.closest('.footer') && !e.target.closest('.header-mobile__account')) {
       // console.log('закрыть');
       menuBtns.forEach(el => {
         el.classList.remove('active');

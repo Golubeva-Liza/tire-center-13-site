@@ -50,7 +50,6 @@
       margin-bottom: 1rem;
       position: relative;
 
-      //иногда просто не работает
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -81,7 +80,6 @@
          position: absolute;
          top: 0;
          left: 0;
-         background-image: url('../../../resources/icons/time.svg');
          background-repeat: no-repeat;
          background-size: cover;
       }
@@ -89,7 +87,7 @@
    &__time{
       margin-bottom: 1rem;
       &::before{
-         background-image: url('../../../resources/icons/time.svg');
+         background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8ZM8.5 7.79289V4H7.5V8.20711L9.64645 10.3536L10.3536 9.64645L8.5 7.79289Z' fill='%236A6A6A'/%3E%3C/svg%3E");
       }
       span{
          font-weight: 500;
@@ -99,7 +97,7 @@
    }
    &__price{
       &::before{
-         background-image: url('../../../resources/icons/price.svg');
+         background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 2H2V3H4V9H2V10H4V12H2V13H4V15H5V13H11V12H5V10H10C12.2091 10 14 8.20914 14 6C14 3.79086 12.2091 2 10 2H5H4ZM5 3V9H10C11.6569 9 13 7.65685 13 6C13 4.34315 11.6569 3 10 3L5 3Z' fill='%236A6A6A'/%3E%3C/svg%3E");
       }
    }
    &__decor{
@@ -108,7 +106,6 @@
       bottom: -5rem;
    }
 }
-
 
 
 @media (max-width: $col-extra-large){

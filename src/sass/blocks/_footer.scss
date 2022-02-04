@@ -4,8 +4,6 @@
    background-image: url('../resources/footer-logo.svg');
    background-repeat: no-repeat;
    background-position: top -1px center;
-   &__nav{
-   }
    &__center{
       grid-column: 4 span;
       padding-top: 5rem;
@@ -86,7 +84,7 @@
             content: '';
             width: 1rem;
             height: 1rem;
-            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z' fill='%231A1E29'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z' fill='%23FF7E00'/%3E%3C/svg%3E");
             background-size: cover;
             background-repeat: no-repeat;
             position: absolute;
@@ -120,10 +118,4 @@
          display: none;
       }
    }
-}
-@media (max-width: $col-medium){
-
-}
-@media (max-width: $col-small){
-
 }

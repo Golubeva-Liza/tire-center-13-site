@@ -1,0 +1,115 @@
+* {
+   font-family: 'IBM Plex Sans', sans-serif;
+   margin: 0;
+   padding: 0;
+}
+html{
+   font-size: 16px;
+}
+html,
+body {
+   height: 100%;
+}
+
+body {
+   overflow-x: hidden;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+   position: relative;
+}
+
+.main {
+   flex: 1 0 auto;
+}
+.footer {
+   flex: 0 0 auto;
+}
+ul {
+   list-style-type: none;
+   margin: 0;
+}
+a:hover {
+   text-decoration: none;
+}
+p {
+   margin: 0;
+}
+.container{
+   width: 1280px;
+   margin: 0 auto;
+   padding: 0 28px;
+}
+.h1{
+   font-weight: 500;
+   font-size: 2.5rem;
+   line-height: 3rem;
+   color: #FFFFFF;
+   max-width: 600px;
+   span{
+      background-color: $color-accent;
+      box-shadow: -10px 0 0 $color-accent, 10px 0 0 $color-accent;
+   }
+}
+.h2{
+   font-weight: 500;
+   font-size: 2rem;
+   line-height: 3rem;
+   text-align: center;
+   color: $color-black;
+   margin: 0;
+   margin-bottom: 2rem;
+}
+.centered{
+   display: flex;
+   justify-content: center;
+}
+.btn-reset {
+   border: none;
+   padding: 0;
+   background: transparent;
+   cursor: pointer;
+ }
+ .visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+ }
+
+
+@media (max-width: $col-extra-large){
+   .container{
+      width: $col-large;
+   }
+}
+@media (max-width: $col-large){
+   .container{
+      width: $col-medium;
+   }
+}
+@media (max-width: $col-medium){
+   .container{
+      width: $col-small;
+      padding: 0 15px;
+   }
+}
+@media (max-width: $col-small){
+   .container{
+      width: auto;
+   }
+   .h2{
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+   }
+}

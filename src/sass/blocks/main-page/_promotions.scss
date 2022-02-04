@@ -14,3 +14,13 @@
       }
    }
 }
+
+
+@media (max-width: $col-small){
+   .promotions{
+      padding: 1.5rem 0;
+      &__inner{
+         margin-bottom: 1rem;
+      }
+   }
+}

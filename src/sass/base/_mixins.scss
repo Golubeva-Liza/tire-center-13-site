@@ -1,4 +1,5 @@
 @mixin reset-button {
+   cursor: pointer;
    border: none;
    background: transparent;
    &:focus{
