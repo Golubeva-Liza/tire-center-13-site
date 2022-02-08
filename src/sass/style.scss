@@ -16,6 +16,7 @@
 @import 'components/rating';
 @import 'components/tags';
 @import 'components/social';
+@import 'components/breadcrumbs';
 
 
 //blocks
@@ -27,6 +28,7 @@
 @import 'blocks/info-card';
 @import 'blocks/product-card';
 @import 'blocks/main-slider';
+@import 'blocks/catalog-filters';
 
 
 //sections on pages
@@ -37,3 +39,5 @@
 @import 'blocks/main-page/popular-wheels';
 @import 'blocks/main-page/promotions';
 @import 'blocks/main-page/about';
+
+@import 'blocks/catalog-page/catalog-content';

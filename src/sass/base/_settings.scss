@@ -53,6 +53,9 @@ p {
       background-color: $color-accent;
       box-shadow: -10px 0 0 $color-accent, 10px 0 0 $color-accent;
    }
+   &_black{
+      color: $color-black;
+   }
 }
 .h2{
    font-weight: 500;
@@ -84,6 +87,10 @@ p {
    clip-path: inset(100%);
    clip: rect(0 0 0 0);
    overflow: hidden;
+ }
+ a.disabled{
+   pointer-events: none;
+   cursor: default; 
  }
 
 

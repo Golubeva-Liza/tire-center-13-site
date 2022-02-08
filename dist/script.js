@@ -34,53 +34,55 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function mainSlider() {
-  //инициализация слайдера
-  const swiper = new (_swiper_bundle_min__WEBPACK_IMPORTED_MODULE_0___default())('.swiper', {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    watchOverflow: true,
-    spaceBetween: 24,
-    breakpoints: {
-      992: {
-        slidesPerView: 3
+  if (document.querySelector('.swiper')) {
+    //инициализация слайдера
+    const swiper = new (_swiper_bundle_min__WEBPACK_IMPORTED_MODULE_0___default())('.swiper', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
       },
-      768: {
-        slidesPerView: 1.76
-      },
-      576: {
-        slidesPerView: 1.3
-      },
-      320: {
-        slidesPerView: 1
+      watchOverflow: true,
+      spaceBetween: 24,
+      breakpoints: {
+        992: {
+          slidesPerView: 3
+        },
+        768: {
+          slidesPerView: 1.76
+        },
+        576: {
+          slidesPerView: 1.3
+        },
+        320: {
+          slidesPerView: 1
+        }
+      }
+    }); //функция, которая отключает работу слайдера, если ширина экрана больше, чем 992px. срабатывает также при изменении ширины экрана
+
+    let isActive = true;
+
+    function swiperInit() {
+      const initNeeded = window.innerWidth < 992;
+
+      if (initNeeded && !isActive) {
+        swiper.forEach(slider => {
+          slider.enable();
+        });
+        isActive = true;
+      }
+
+      if (!initNeeded && isActive) {
+        // swiper.destroy(true, true);
+        swiper.forEach(slider => {
+          slider.disable();
+        });
+        isActive = false;
       }
     }
-  }); //функция, которая отключает работу слайдера, если ширина экрана больше, чем 992px. срабатывает также при изменении ширины экрана
 
-  let isActive = true;
-
-  function swiperInit() {
-    const initNeeded = window.innerWidth < 992;
-
-    if (initNeeded && !isActive) {
-      swiper.forEach(slider => {
-        slider.enable();
-      });
-      isActive = true;
-    }
-
-    if (!initNeeded && isActive) {
-      // swiper.destroy(true, true);
-      swiper.forEach(slider => {
-        slider.disable();
-      });
-      isActive = false;
-    }
+    swiperInit();
+    window.onresize = swiperInit;
   }
-
-  swiperInit();
-  window.onresize = swiperInit;
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (mainSlider);
@@ -173,12 +175,8 @@ const getSelect = (placeholder = 'Выберите элемент', data, select
   }); //возвращает массив, будет выводиться с запятыми
 
   return `
-      <div class="select__backdrop" data-type="backdrop"></div>
       <div class="select__input" data-type="input">
          <span data-type="value">${placeholder}</span>
-         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
-         </svg>
       </div>
       <div class="select__dropdown">
          <ul class="select__list">
@@ -221,8 +219,11 @@ class Select {
     } else if (type === 'select-item') {
       const id = e.target.dataset.id;
       this.changeValue(e.target, id);
-    } else if (type === 'backdrop') {
-      this.select.classList.remove('select_open');
+    }
+
+    if (type === 'input' && e.target.closest('.select').classList.contains('select_open')) {
+      this.closeSelect = this.closeSelect.bind(this);
+      document.addEventListener('click', this.closeSelect);
     }
   }
 
@@ -230,14 +231,26 @@ class Select {
     // const current = this.options.data.find(item => item.id === id);
     this.value.textContent = elem.textContent;
     this.select.classList.remove('select_open');
+    document.removeEventListener('click', this.closeSelect); //чтобы не создавалось много обработчиков
+
     this.select.querySelectorAll('[data-type="select-item"]').forEach(elem => {
       elem.classList.remove('selected');
     });
     this.select.querySelector(`[data-id="${id}"]`).classList.add('selected');
   }
 
-  destoy() {
+  destroy() {
     this.select.removeEventListener('click', this.clickSelect);
+  }
+
+  closeSelect(e) {
+    // console.log('открыто');
+    //если был нажат не селект или если открытый селект не совпадает с нажатым
+    if (!e.target.closest('.select') || e.target.closest('.select').id != this.select.id) {
+      this.select.classList.remove('select_open'); // console.log('закрыто');
+
+      document.removeEventListener('click', this.closeSelect);
+    }
   }
 
 }
@@ -723,76 +736,133 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function selectSettings() {
-  new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-maker', {
-    placeholder: 'Производитель',
-    data: [{
-      id: '1',
-      value: 'пункт1'
-    }, {
-      id: '2',
-      value: 'пункт2'
-    }, {
-      id: '3',
-      value: 'пункт4'
-    }]
-  });
-  new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-model', {
-    placeholder: 'Модель',
-    data: [{
-      id: '1',
-      value: 'пункт1'
-    }, {
-      id: '2',
-      value: 'пункт2'
-    }, {
-      id: '3',
-      value: 'пункт3'
-    }],
-    disabled: true
-  });
-  new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-generation', {
-    placeholder: 'Поколение',
-    data: [{
-      id: '1',
-      value: 'пункт1'
-    }, {
-      id: '2',
-      value: 'пункт2'
-    }, {
-      id: '3',
-      value: 'пункт3'
-    }],
-    disabled: true
-  });
-  new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-modification', {
-    placeholder: 'Модификация',
-    data: [{
-      id: '1',
-      value: 'пункт1'
-    }, {
-      id: '2',
-      value: 'пункт2'
-    }, {
-      id: '3',
-      value: 'пункт3'
-    }],
-    disabled: true
-  });
-  new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-car-body', {
-    placeholder: 'Кузов',
-    data: [{
-      id: '1',
-      value: 'пункт1'
-    }, {
-      id: '2',
-      value: 'пункт2'
-    }, {
-      id: '3',
-      value: 'пункт3'
-    }],
-    disabled: true // selectedId: '3'
+  if (document.querySelector('.search-parameters')) {
+    new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-maker', {
+      placeholder: 'Производитель',
+      data: [{
+        id: '1',
+        value: 'пункт1'
+      }, {
+        id: '2',
+        value: 'пункт2'
+      }, {
+        id: '3',
+        value: 'пункт4'
+      }]
+    });
+    new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-model', {
+      placeholder: 'Модель',
+      data: [{
+        id: '1',
+        value: 'пункт1'
+      }, {
+        id: '2',
+        value: 'пункт2'
+      }, {
+        id: '3',
+        value: 'пункт3'
+      }],
+      disabled: false
+    });
+    new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-generation', {
+      placeholder: 'Поколение',
+      data: [{
+        id: '1',
+        value: 'пункт1'
+      }, {
+        id: '2',
+        value: 'пункт2'
+      }, {
+        id: '3',
+        value: 'пункт3'
+      }],
+      disabled: true
+    });
+    new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-modification', {
+      placeholder: 'Модификация',
+      data: [{
+        id: '1',
+        value: 'пункт1'
+      }, {
+        id: '2',
+        value: 'пункт2'
+      }, {
+        id: '3',
+        value: 'пункт3'
+      }],
+      disabled: true
+    });
+    new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-car-body', {
+      placeholder: 'Кузов',
+      data: [{
+        id: '1',
+        value: 'пункт1'
+      }, {
+        id: '2',
+        value: 'пункт2'
+      }, {
+        id: '3',
+        value: 'пункт3'
+      }],
+      disabled: true // selectedId: '3'
 
-  });
+    });
+  }
+
+  if (document.querySelector('.catalog-content')) {
+    new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-width', {
+      placeholder: 'Все',
+      data: [{
+        id: '1',
+        value: 'Все'
+      }, {
+        id: '2',
+        value: 'пункт2'
+      }, {
+        id: '3',
+        value: 'пункт4'
+      }]
+    });
+    new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-profile', {
+      placeholder: 'Все',
+      data: [{
+        id: '1',
+        value: 'Все'
+      }, {
+        id: '2',
+        value: 'пункт2'
+      }, {
+        id: '3',
+        value: 'пункт4'
+      }]
+    });
+    new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-diameter', {
+      placeholder: 'Все',
+      data: [{
+        id: '1',
+        value: 'Все'
+      }, {
+        id: '2',
+        value: 'пункт2'
+      }, {
+        id: '3',
+        value: 'пункт4'
+      }]
+    });
+    new _components_select__WEBPACK_IMPORTED_MODULE_0__.Select('#select-sort', {
+      placeholder: 'Сначала дорогие',
+      data: [{
+        id: '1',
+        value: 'Сначала дорогие'
+      }, {
+        id: '2',
+        value: 'Сначала дешевые'
+      }, {
+        id: '3',
+        value: 'Популярные'
+      }]
+    });
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (selectSettings);

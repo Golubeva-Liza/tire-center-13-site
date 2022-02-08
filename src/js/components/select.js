@@ -12,12 +12,8 @@ const getSelect = (placeholder = 'Выберите элемент', data, select
    //возвращает массив, будет выводиться с запятыми
 
    return `
-      <div class="select__backdrop" data-type="backdrop"></div>
       <div class="select__input" data-type="input">
          <span data-type="value">${placeholder}</span>
-         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.72499L3.54236 7L8 9.91976L12.4576 7L13 7.72499L8 11L3 7.72499Z" fill="#1A1E29"/>
-         </svg>
       </div>
       <div class="select__dropdown">
          <ul class="select__list">
@@ -65,8 +61,11 @@ export class Select{
       } else if (type === 'select-item'){
          const id = e.target.dataset.id;
          this.changeValue(e.target, id);
-      } else if (type === 'backdrop'){
-         this.select.classList.remove('select_open');
+      }
+
+      if (type === 'input' && e.target.closest('.select').classList.contains('select_open')){
+         this.closeSelect = this.closeSelect.bind(this);
+         document.addEventListener('click', this.closeSelect);
       }
    }
 
@@ -74,6 +73,7 @@ export class Select{
       // const current = this.options.data.find(item => item.id === id);
       this.value.textContent = elem.textContent;
       this.select.classList.remove('select_open');
+      document.removeEventListener('click', this.closeSelect);//чтобы не создавалось много обработчиков
 
       this.select.querySelectorAll('[data-type="select-item"]').forEach(elem => {
          elem.classList.remove('selected');
@@ -81,8 +81,17 @@ export class Select{
       this.select.querySelector(`[data-id="${id}"]`).classList.add('selected');
    }
 
-   destoy(){
+   destroy(){
       this.select.removeEventListener('click', this.clickSelect)
    }
 
+   closeSelect(e){
+      // console.log('открыто');
+      //если был нажат не селект или если открытый селект не совпадает с нажатым
+      if (!e.target.closest('.select') || e.target.closest('.select').id != this.select.id){
+         this.select.classList.remove('select_open');
+         // console.log('закрыто');
+         document.removeEventListener('click', this.closeSelect);
+      }
+   }
 }

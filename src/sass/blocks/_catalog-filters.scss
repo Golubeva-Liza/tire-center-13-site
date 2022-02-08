@@ -1,0 +1,20 @@
+.catalog-filters{
+   &__input{
+      margin-bottom: 1.5rem;
+   }
+
+}
+
+.filters-input{
+   width: calc(100% - 1rem);
+   &__label{
+      font-size: 14px;
+      line-height: 16px;
+      color: $color-text-grey;
+      display: block;
+      margin-bottom: 0.5rem;
+   }
+   &__select{
+      width: 100%;
+   }
+}
